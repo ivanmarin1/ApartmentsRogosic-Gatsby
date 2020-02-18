@@ -1,0 +1,22 @@
+.link {
+  text-decoration: none;
+}
+
+.wrapper {
+  text-decoration: none;
+  margin: 25px 5px;
+  border-bottom: 1px solid grey;
+}
+
+.auth > h3 {
+  color: #4a4ebb;
+  font-size: 18px;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.date {
+  font-size: 8px;
+}

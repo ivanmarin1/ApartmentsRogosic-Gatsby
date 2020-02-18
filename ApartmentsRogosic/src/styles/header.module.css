@@ -1,0 +1,36 @@
+header {
+  width: 100%;
+  background-color: #4a4ebb;
+}
+
+.headerLayout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+@media screen and (max-width: 600px) {
+}
+
+#mainHeader {
+  font-style: normal;
+  font-weight: normal;
+  margin: 0;
+  color: white;
+  max-width: 960;
+  font-size: 200%;
+  font-family: Muli, sans-serif;
+  float: left;
+}
+
+#sideHeader {
+  font-style: normal;
+  font-weight: normal;
+  float: right;
+  color: #d8d8d8;
+  font-size: 150%;
+  font-family: Muli, sans-serif;
+  margin: 0;
+}

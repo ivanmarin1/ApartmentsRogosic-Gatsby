@@ -1,0 +1,48 @@
+.navButton {
+  display: inline-block;
+  margin: 0;
+  width: 16.66%;
+  height: 55px;
+  text-align: center;
+  padding: 0;
+  color: white;
+  text-decoration: none;
+  font: 10px Play, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+}
+.navBar {
+  background-color: #8b8ed0;
+  display: none;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  margin: 0;
+  padding: 0;
+  z-index: 2;
+}
+.navBar > ul {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+}
+.navIcon {
+  width: 32px;
+  margin: 5px auto;
+}
+@media screen and (max-width: 700px) {
+  .navBar {
+    display: inline;
+  }
+}
+@media screen and (max-width: 400px) {
+  .navButton {
+    font: 9px Play, sans-serif;
+  }
+  .navIcon {
+    width: 25px;
+    margin: 7px auto;
+  }
+}

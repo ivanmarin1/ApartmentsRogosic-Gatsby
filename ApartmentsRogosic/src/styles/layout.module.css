@@ -1,0 +1,66 @@
+body {
+  margin: 0 auto;
+  width: 100%;
+  font-family: "Muli, sans-serif";
+  color: #494949;
+}
+
+p {
+  color: #494949;
+  font: 17px play, sans-serif;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.mainContainer {
+  max-width: 1100px;
+  width: 70%;
+  margin: 0 auto;
+  padding: 5% 0;
+  text-align: center;
+}
+
+.carousel {
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.slideImages {
+  max-height: 700px;
+}
+
+@media screen and (max-width: 600px) {
+  .mainContainer {
+    width: 85%;
+  }
+  body {
+    padding-bottom: 60px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .mainContainer {
+    width: 100%;
+  }
+  body {
+    padding-bottom: 60px;
+  }
+}
+
+h1 {
+  letter-spacing: 2px;
+}
+h2 {
+  letter-spacing: 1px;
+  color: black;
+  margin: "2%";
+  text-align: left;
+  font-family: Muli, sans-serif;
+}
+h3 {
+  letter-spacing: 1px;
+  color: white;
+  margin: 0;
+  text-align: left;
+  font-family: Muli, sans-serif;
+}

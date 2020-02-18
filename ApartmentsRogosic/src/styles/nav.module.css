@@ -1,0 +1,42 @@
+.navButton {
+  display: inline-block;
+  margin: 0;
+  width: 16.66%;
+  text-align: center;
+  padding: 10px 0;
+  color: white;
+  text-decoration: none;
+  font: 17px Play, sans-serif;
+  font-style: normal;
+}
+
+.navBar {
+  background-color: #8b8ed0;
+  overflow: hidden;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.navBar > ul {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+}
+@media screen and (max-width: 700px) {
+  .navBar {
+    display: none;
+  }
+}
+
+.arrow {
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #7aaeeb;
+  border-radius: 50%;
+  margin: 10px;
+}
+
+.arrow p {
+}

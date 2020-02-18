@@ -1,51 +1,45 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import React from "react"
-import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
-
+import Navigation from "./navigation"
+import NavigationMobile from "./navigationMobile"
 import Header from "./header"
-import "./layout.css"
+import Footer from "./footer"
+import styles from "../styles/layout.module.css"
+import { StaticQuery, graphql } from "gatsby"
 
-const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-
+const Layout = props => {
+  const screenHeight =
+    typeof window !== "undefined" && window.screen.availHeight
+  const style = { minHeight: screenHeight, position: "relative" }
   return (
-    <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
-      </div>
-    </>
+    <StaticQuery
+      query={graphql`
+        {
+          site {
+            siteMetadata {
+              title
+              menuItems {
+                text
+                link
+                number
+                iconName
+              }
+            }
+          }
+        }
+      `}
+      render={data => (
+        <div style={style} className={styles.layout}>
+          <Header></Header>
+          <Navigation menuItems={data.site.siteMetadata.menuItems}></Navigation>
+          <NavigationMobile
+            menuItems={data.site.siteMetadata.menuItems}
+          ></NavigationMobile>
+          {props.children}
+          <Footer></Footer>
+        </div>
+      )}
+    ></StaticQuery>
   )
-}
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
 }
 
 export default Layout
