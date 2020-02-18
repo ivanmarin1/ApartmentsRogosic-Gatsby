@@ -21,9 +21,8 @@ const IndexPage = () => (
           </TitleBar>
           <div>
             <p>
-              Dobro došli u naše apartmane smještene u Baškoj Vodi, u podnožje
-              veličanstvenoga masiva planine Biokovo, na zapadni dio Makarskoga
-              primorja, u Dalmaciju, na hrvatsku obalu Jadrana!
+              U maloj zaštićenoj uvali Osibova, na jugozapadnoj strani otoka
+              Brača, uz samo more, nalazi se naša kuća.
             </p>
             <p>
               Istražite naše apartmane i izaberite smještaj koji odgovara vašim

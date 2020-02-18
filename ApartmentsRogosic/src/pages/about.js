@@ -19,20 +19,20 @@ const SecondPage = () => (
             <p>
               Zaboravite svakodnevne brige i probleme, opustite se na balkonu
               ili terasi i uživajte u prekrasnom pogledu na more i susjedni otok
-              Brač.
+              Hvar.
             </p>
             <p>
               Kristalno čisto, azurno plavo more brzo će vas izmamiti iz
               ležaljke i za samo par koraka naći ćete se u beskrajnom
               prostranstvu plavetnila. Uz koncert cvrčaka, ispratite vaš sunčani
-              dan ili prošetajte do malog, ali veoma živog, mjesta Baške Vode.
+              dan ili prošetajte do malog, ali veoma živog, mjesta Milna.
             </p>
             <p>
-              U Baškoj Vodi vas čekaju različiti restorani, kafići, pekare,
-              dućani, pošta te lučica za brodove ukoliko posjedujete jedan.
-              Predivna slika vrijedna posjete je večernji povratak brodova u
-              luku. Tko voli aktivniji odmor može puno toga naći u okolici
-              mjesta, domaćini će vas rado savjetovati.
+              U Milni vas čekaju različiti restorani, kafići, pekare, dućani,
+              pošta te lučica za brodove ukoliko posjedujete jedan. Predivna
+              slika vrijedna posjete je večernji povratak brodova u luku. Tko
+              voli aktivniji odmor može puno toga naći u okolici mjesta,
+              domaćini će vas rado savjetovati.
             </p>
           </div>
         </div>

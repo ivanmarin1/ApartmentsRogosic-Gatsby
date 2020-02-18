@@ -16,10 +16,10 @@ const ContactPage = () => (
           <TitleBar>
             <h3>KONTAKT</h3>
           </TitleBar>
-          <p>Ime prezime: Mirna Jurjević-Škopinić</p>
-          <p> Email: mirna12345@gmail.com</p>
-          <p>Broj mobitela: 099/198-0646</p>
-          <p> Adresa: Baška 5, 21320 Baška Voda</p>
+          <p>Ime prezime: Ivan Rogošić</p>
+          <p> Email: Ivan@apartments-rogosic.com</p>
+          <p>Broj mobitela: ++49 1771 40 28 60</p>
+          <p> Adresa: Kalina 68, 21405 Milna, Brač</p>
         </div>
         <div>
           <Image filename="house-main" alt="Main house"></Image>

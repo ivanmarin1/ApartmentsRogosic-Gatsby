@@ -6,7 +6,6 @@ import SEO from "../components/seo"
 import styles from "../styles/layout.module.css"
 import ApartmentInfo from "../components/apartmentInfo"
 import style from "../styles/apartments.module.css"
-// import Search from "../components/searchContainer"
 
 const ApartmentsPage = ({
   data: {
@@ -28,8 +27,7 @@ const ApartmentsPage = ({
             vam odgovoriti u što kraćem roku :)
           </p>
         </div>
-        {/* <Search apartment={edges}></Search> */}
-        {/* <Apartments apartment={edges}></Apartments> */}
+        <Apartments apartment={edges}></Apartments>
       </div>
     </Layout>
   )
