@@ -1,6 +1,6 @@
 hr {
   height: 0.25rem;
-  width: 16.66%;
+  width: 20%;
   margin: 0;
   background: #ffc59b;
   border: none;
@@ -12,23 +12,19 @@ hr {
   visibility: initial;
 }
 .two.active ~ hr {
-  margin-left: 16.66%;
+  margin-left: 20%;
   visibility: initial;
 }
 .three.active ~ hr {
-  margin-left: 33.32%;
+  margin-left: 40%;
   visibility: initial;
 }
 .four.active ~ hr {
-  margin-left: 50%;
+  margin-left: 60%;
   visibility: initial;
 }
 .five.active ~ hr {
-  margin-left: 66.64%;
-  visibility: initial;
-}
-.six.active ~ hr {
-  margin-left: 83.33%;
+  margin-left: 80%;
   visibility: initial;
 }
 
@@ -37,23 +33,19 @@ hr {
   visibility: initial;
 }
 .two:hover ~ hr {
-  margin-left: 16.66% !important;
+  margin-left: 20% !important;
   visibility: initial;
 }
 .three:hover ~ hr {
-  margin-left: 33.32% !important;
+  margin-left: 40% !important;
   visibility: initial;
 }
 .four:hover ~ hr {
-  margin-left: 50% !important;
+  margin-left: 60% !important;
   visibility: initial;
 }
 .five:hover ~ hr {
-  margin-left: 66.64% !important;
-  visibility: initial;
-}
-.six:hover ~ hr {
-  margin-left: 83.33% !important;
+  margin-left: 80% !important;
   visibility: initial;
 }
 

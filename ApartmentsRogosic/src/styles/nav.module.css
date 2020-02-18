@@ -1,7 +1,7 @@
 .navButton {
   display: inline-block;
   margin: 0;
-  width: 16.66%;
+  width: 20%;
   text-align: center;
   padding: 10px 0;
   color: white;
@@ -17,11 +17,13 @@
   margin: 0;
   padding: 0;
 }
+
 .navBar > ul {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0;
 }
+
 @media screen and (max-width: 700px) {
   .navBar {
     display: none;
@@ -36,7 +38,4 @@
   background-color: #7aaeeb;
   border-radius: 50%;
   margin: 10px;
-}
-
-.arrow p {
 }
