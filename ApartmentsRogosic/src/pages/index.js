@@ -38,7 +38,7 @@ const IndexPage = () => (
           </div>
         </div>
         <div>
-          <Image filename="house-main.jpg"></Image>
+          <Image filename="balcon_view.jpg"></Image>
         </div>
       </SplitScreen>
       <p

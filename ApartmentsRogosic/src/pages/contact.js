@@ -22,7 +22,7 @@ const ContactPage = () => (
           <p> Adresa: Kalina 68, 21405 Milna, Brač</p>
         </div>
         <div>
-          <Image filename="house-main" alt="Main house"></Image>
+          <Image filename="house-with-sea.jpg" alt="Main house"></Image>
         </div>
       </SplitScreen>
       <div style={{ marginBottom: "20px" }}>

@@ -37,7 +37,7 @@ const SecondPage = () => (
           </div>
         </div>
         <div style={{ marginBottom: "20px" }}>
-          <Image filename="baska-voda-plaza.jpg" alt="baska_plaza"></Image>
+          <Image filename="house-main.jpg" alt="baska_plaza"></Image>
         </div>
       </SplitScreen>
     </div>
