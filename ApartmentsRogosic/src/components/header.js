@@ -6,10 +6,10 @@ const Header = () => (
   <header>
     <div className={styles.headerLayout}>
       <div>
-        <h1 id={styles.mainHeader}>APARTMANI MIRNA</h1>
+        <h1 id={styles.mainHeader}>APARTMANI ROGOŠIĆ</h1>
       </div>
       <div>
-        <h3 id={styles.sideHeader}>Baška Voda</h3>
+        <h3 id={styles.sideHeader}>Osibova, Brač</h3>
       </div>
     </div>
   </header>
