@@ -13,7 +13,7 @@ const ApartmentsPage = ({
   },
 }) => {
   return (
-    <Layout>
+    <>
       <div className={styles.mainContainer}>
         <SEO title="Apartments" />
         <TitleBar>
@@ -29,7 +29,7 @@ const ApartmentsPage = ({
         </div>
         <Apartments apartment={edges}></Apartments>
       </div>
-    </Layout>
+    </>
   )
 }
 

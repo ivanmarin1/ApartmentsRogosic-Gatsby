@@ -8,7 +8,7 @@ import Image from "../components/image"
 import styles from "../styles/layout.module.css"
 
 const ContactPage = () => (
-  <Layout>
+  <>
     <div className={styles.mainContainer}>
       <SEO title="Contact" />
       <SplitScreen>
@@ -30,7 +30,7 @@ const ContactPage = () => (
         {/* <GoogleMaps latitude="43.356959" longitude="16.952332"></GoogleMaps> */}
       </div>
     </div>
-  </Layout>
+  </>
 )
 
 export default ContactPage

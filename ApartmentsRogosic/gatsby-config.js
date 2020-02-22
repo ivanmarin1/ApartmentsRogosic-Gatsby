@@ -39,6 +39,14 @@ module.exports = {
 
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-material-ui`,
+    {
+      resolve: `gatsby-plugin-layout`,
+      options: {
+        // add relative path to your layout component
+        component: `${__dirname}/src/components/layout.js`,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

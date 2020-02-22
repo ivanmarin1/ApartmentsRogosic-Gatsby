@@ -7,7 +7,7 @@ import SplitScreen from "../components/splitScreen"
 import styles from "../styles/layout.module.css"
 
 const SecondPage = () => (
-  <Layout>
+  <>
     <div className={styles.mainContainer}>
       <SEO title="About us" />
       <SplitScreen>
@@ -41,7 +41,7 @@ const SecondPage = () => (
         </div>
       </SplitScreen>
     </div>
-  </Layout>
+  </>
 )
 
 export default SecondPage

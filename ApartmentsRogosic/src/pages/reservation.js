@@ -6,7 +6,7 @@ import Form from "../components/form"
 import styles from "../styles/layout.module.css"
 
 const ReservationPage = () => (
-  <Layout>
+  <>
     <div className={styles.mainContainer}>
       <div style={{ maxWidth: "700px", margin: "0 auto" }}>
         <SEO title="Reservation" />
@@ -22,7 +22,7 @@ const ReservationPage = () => (
         <Form id="root"></Form>
       </div>
     </div>
-  </Layout>
+  </>
 )
 
 export default ReservationPage
