@@ -20,7 +20,11 @@ const ContactPage = () => {
             </TitleBar>
             <p>{t("contact.name")} Ivan Rogošić</p>
             <p>{t("contact.email")} Ivan@apartments-rogosic.com</p>
-            <p>{t("contact.phone")} +49 1771 40 28 60</p>
+            <p>
+              {t("contact.phone")} +49 1771 40 28 60
+              <br />
+              +385 95/813-1807
+            </p>
             <p>{t("contact.address")} Kalina 68, 21405 Milna, Brač</p>
           </div>
           <div>
