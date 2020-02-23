@@ -13,7 +13,7 @@ const IndexPage = props => {
   const { t } = useTranslation()
   return (
     <>
-      <SEO title="Home" />
+      <SEO title={t("home.subtitle")} />
       <Slideshow></Slideshow>
       <div className={styles.mainContainer}>
         <SplitScreen>
@@ -22,21 +22,10 @@ const IndexPage = props => {
               <h3>{t("home.subtitle")}</h3>
             </TitleBar>
             <div>
-              <p>
-                U maloj zaštićenoj uvali Osibova, na jugozapadnoj strani otoka
-                Brača, uz samo more, nalazi se naša kuća.
-              </p>
-              <p>
-                Pretražite naše apartmane i izaberite smještaj koji odgovara
-                vašim potrebama.
-              </p>
-              <p>
-                Ukoliko ste spremni rezervirati, slobodno ispunite našu formu te
-                rezervirajte vaš odmor :)
-              </p>
+              <p>{t("home.text")}</p>
               <Link to="/reservation/">
                 <button className={apartStyle.contrastButton}>
-                  REZERVIRAJ
+                  {t("site.button")}
                 </button>
               </Link>
             </div>
@@ -53,7 +42,7 @@ const IndexPage = props => {
             paddingTop: "2%",
           }}
         >
-          Radujemo se vašem dolasku i želimo vam ugodan odmor kod nas :)
+          {t("home.blueText")}
         </p>
       </div>
     </>

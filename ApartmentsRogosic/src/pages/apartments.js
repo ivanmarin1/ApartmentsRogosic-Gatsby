@@ -1,31 +1,27 @@
 import React from "react"
 import { graphql } from "gatsby"
 import TitleBar from "../components/titleBar"
-import Layout from "../components/layout"
 import SEO from "../components/seo"
 import styles from "../styles/layout.module.css"
 import ApartmentInfo from "../components/apartmentInfo"
 import style from "../styles/apartments.module.css"
+import { useTranslation } from "react-i18next"
 
 const ApartmentsPage = ({
   data: {
     allMarkdownRemark: { edges },
   },
 }) => {
+  const { t } = useTranslation()
   return (
     <>
       <div className={styles.mainContainer}>
-        <SEO title="Apartments" />
+        <SEO title={t("apartments.subtitle")} />
         <TitleBar>
-          <h3>APARTMANI</h3>
+          <h3>{t("apartments.subtitle")}</h3>
         </TitleBar>
         <div>
-          <p>
-            Istražite naše apartmane i pronađite smještaj koji odgovara vašim
-            potrebama. <br />
-            Ukoliko nađete željeni apartman, slobodno rezervirajte, a mi ćemo
-            vam odgovoriti u što kraćem roku :)
-          </p>
+          <p>{t("apartments.intro")}</p>
         </div>
         <Apartments apartment={edges}></Apartments>
       </div>
