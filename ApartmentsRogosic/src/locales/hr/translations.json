@@ -1,8 +1,73 @@
 {
   "site": {
-    "heading": "Apartmani Rogošić"
+    "heading": "Apartmani Rogošić",
+    "button": "REZERVIRAJ",
+    "footer": "Apartmani Rogošić"
+  },
+  "menuItems": {
+    "first": "POČETNA",
+    "second": "O NAMA",
+    "third": "APARTMANI",
+    "fourth": "REZERVACIJE",
+    "fifth": "KONTAKT"
   },
   "home": {
-    "subtitle": "DOBRODOŠLI"
+    "subtitle": "DOBRODOŠLI",
+    "text": "U maloj zaštićenoj uvali Osibova, na jugozapadnoj strani otoka Brača, uz samo more, nalazi se naša kuća. Pretražite naše apartmane i izaberite smještaj koji odgovara vašim potrebama. Ukoliko ste spremni rezervirati, slobodno ispunite našu formu te rezervirajte vaš odmor :)",
+    "blueText": "Radujemo se vašem dolasku i želimo vam ugodan odmor kod nas!"
+  },
+  "about": {
+    "subtitle": "O NAMA",
+    "text": "Zaboravite svakodnevne brige i probleme, opustite se na balkonu ili terasi i uživajte u prekrasnom pogledu na more i susjedni otok Hvar. Kristalno čisto, azurno plavo more brzo će vas izmamiti iz ležaljke i za samo par koraka naći ćete se u beskrajnom prostranstvu plavetnila. Uz koncert cvrčaka, ispratite vaš sunčani dan ili prošetajte do malog, ali veoma živog, mjesta Milna. U Milni vas čekaju različiti restorani, kafići, pekare, dućani, pošta te lučica za brodove ukoliko posjedujete jedan. Predivna slika vrijedna posjete je večernji povratak brodova u luku. Tko voli aktivniji odmor može puno toga naći u okolici mjesta, domaćini će vas rado savjetovati."
+  },
+  "apartments": {
+    "subtitle": "APARTMANI",
+    "intro": "Pretražite naše apartmane i pronađite smještaj koji odgovara vašim potrebama. Ukoliko nađete željeni apartman, slobodno rezervirajte, a mi ćemo vam odgovoriti u što kraćem roku :)",
+    "button": "Apartman"
+  },
+  "reservation": {
+    "text": "Ukoliko želite provesti odmor kod nas, slobodno ispunite donji formular te ćemo vam se mi javiti u najkraćem mogućem roku :)"
+  },
+  "contact": {
+    "name": "Ime prezime: ",
+    "email": "Email: ",
+    "phone": "Broj mobitela: ",
+    "address": "Adresa: "
+  },
+  "form": {
+    "firstNameMin": "Sigurno vam je ime dulje :)",
+    "firstNameReq": "Ime je obavezno.",
+    "lastNameMin": "Sigurno vam je prezime dulje :)",
+    "lastNameReq": "Prezime je obavezno.",
+    "emailError": "Neispravna email adresa.",
+    "emailReq": "Email je obavezan.",
+    "personNumMin": "Sigurno vas je više od 0.",
+    "personNumMax": "Nemamo gdje smjestiti toliko osoba :)",
+    "personNumReq": "Broj osoba je obavezan.",
+    "dateReq": "Datum je obavezan.",
+    "apartmentMin": "Ne posjedujemo nulti apartman :)",
+    "apartmentMax": "Nemamo baš toliko apartmana :)",
+    "apartmentReq": "Morate uzeti barem jedan apartman :)",
+    "alert": "Hvala vam na vašoj rezervaciji",
+    "confirm": "Jeste li sigurni da želite poslati zahtjev?",
+    "firstName": "Ime",
+    "firstNamePlaceholder": "Ivan",
+    "lastName": "Prezime",
+    "lastNamePlaceholder": "Ivić",
+    "email": "Email",
+    "emailPlaceholder": "Ivan.ivic@gmail.com",
+    "personNum": "Broj osoba",
+    "personNumPlaceholder": "Unesite broj osoba",
+    "dateArrival": "Datum dolaska",
+    "date1Placeholder": "Izaberite datum dolaska",
+    "dateDeparture": "Datum odlaska",
+    "date2Placeholder": "Izaberite datum odlaska",
+    "apartmentNum": "Broj željenog apartmana",
+    "apartmentNumPlaceholder": "Koji apartman biste željeli",
+    "comment": "Dodatni komentar",
+    "commentPlaceholder": "Ukoliko imate još pitanja, slobodno pitajte :)",
+    "resetConfirm": "Jeste li sigurni da želite poništiti unos?",
+    "resetButton": "Poništi",
+    "sendButton": "Pošalji"
   }
 }
