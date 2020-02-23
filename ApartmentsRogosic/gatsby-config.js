@@ -3,38 +3,6 @@ module.exports = {
     title: `Apartments Rogošić`,
     description: `Enjoy your stay with us.`,
     author: `Ivan Marin`,
-    menuItems: [
-      {
-        text: "POČETNA",
-        link: "/",
-        number: "one",
-        iconName: "home.png",
-      },
-      {
-        text: "O NAMA",
-        link: "/about/",
-        number: "two",
-        iconName: "aboutus.png",
-      },
-      {
-        text: "APARTMANI",
-        link: "/apartments/",
-        number: "three",
-        iconName: "apartments.png",
-      },
-      {
-        text: "REZERVACIJE",
-        link: "/reservation/",
-        number: "four",
-        iconName: "reservation.png",
-      },
-      {
-        text: "KONTAKT",
-        link: "/contact/",
-        number: "five",
-        iconName: "contact.png",
-      },
-    ],
   },
 
   plugins: [
