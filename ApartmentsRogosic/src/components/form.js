@@ -1,43 +1,10 @@
 import "../styles/formik-demo.css"
 import React from "react"
-import { withFormik } from "formik"
+import { Formik } from "formik"
 import * as Yup from "yup"
 import classnames from "classnames"
-
-const formikEnhancer = withFormik({
-  validationSchema: Yup.object().shape({
-    firstName: Yup.string()
-      .strict(true)
-      .min(2, "Sigurno vam je ime dulje :)")
-      .required("Ime je obavezno."),
-    lastName: Yup.string()
-      .min(2, "Sigurno vam je ime dulje :)")
-      .required("Prezime je obavezno."),
-    email: Yup.string()
-      .email("Neispravna email adresa")
-      .required("Email je obavezan!"),
-    personNum: Yup.number()
-      .min(1, "Sigurno vas je više od 0")
-      .max(20, "Nemamo gdje smjestiti toliko osoba :)")
-      .required("Broj osoba je obavezan"),
-    date: Yup.date().required("Datum je obavezan"),
-    date2: Yup.date().required("Datum je obavezan"),
-    apartmentNum: Yup.number()
-      .min(1, "Ne posjedujemo nulti apartman :)")
-      .max(6, "Nemamo baš toliko apartmana :)")
-      .required("Morate uzeti barem jedan apartman :)"),
-    comment: Yup.string(),
-  }),
-
-  mapPropsToValues: ({ user }) => ({
-    ...user,
-  }),
-  handleSubmit: (payload, { setSubmitting }) => {
-    alert("Hvala vam na vašoj rezervaciji " + payload.firstName + " :)")
-    setSubmitting(false)
-  },
-  displayName: "MyForm",
-})
+import { useTranslation } from "react-i18next"
+import WithTranslateFormErrors from "../i18n/useTranslateFormErrors"
 
 const InputFeedback = ({ error }) =>
   error ? <div className="input-feedback">{error}</div> : null
@@ -120,143 +87,191 @@ const TextArea = ({
     </div>
   )
 }
-const MyForm = props => {
-  const {
-    values,
-    touched,
-    errors,
-    dirty,
-    handleChange,
-    handleBlur,
-    handleSubmit,
-    handleReset,
-    isSubmitting,
-  } = props
-  return (
-    <form
-      onSubmit={() => {
-        if (window.confirm("Jeste li sigurni da želite poslati zahtjev?"))
-          handleSubmit()
-      }}
-    >
-      <TextInput
-        id="firstName"
-        type="text"
-        label="Ime"
-        placeholder="Ivan"
-        error={touched.firstName && errors.firstName}
-        value={values.firstName}
-        onChange={handleChange}
-        onBlur={handleBlur}
-      />
-      <TextInput
-        id="lastName"
-        type="text"
-        label="Prezime"
-        placeholder="Ivić"
-        error={touched.lastName && errors.lastName}
-        value={values.lastName}
-        onChange={handleChange}
-        onBlur={handleBlur}
-      />
-      <TextInput
-        id="email"
-        type="email"
-        label="Email"
-        placeholder="Unesite vašu email adresu"
-        error={touched.email && errors.email}
-        value={values.email}
-        onChange={handleChange}
-        onBlur={handleBlur}
-      />
-      <TextInput
-        id="personNum"
-        type="number"
-        label="Broj osoba"
-        placeholder="Unesite broj osoba"
-        error={touched.personNum && errors.personNum}
-        value={values.personNum}
-        onChange={handleChange}
-        onBlur={handleBlur}
-      />
-      <TextInput
-        id="date"
-        type="date"
-        label="Datum dolaska"
-        placeholder="Izaberite datum dolaska"
-        error={touched.date && errors.date}
-        value={values.date}
-        onChange={handleChange}
-        onBlur={handleBlur}
-      />
-      <TextInput
-        id="date2"
-        type="date"
-        label="Datum odlaska"
-        placeholder="Izaberite datum odlaska"
-        error={touched.date2 && errors.date2}
-        value={values.date2}
-        onChange={handleChange}
-        onBlur={handleBlur}
-      />
-      <TextInput
-        id="apartmentNum"
-        type="number"
-        label="Broj željenog apartmana"
-        placeholder="Koji apartman biste željeli"
-        error={touched.apartmentNum && errors.apartmentNum}
-        value={values.apartmentNum}
-        onChange={handleChange}
-        onBlur={handleBlur}
-      />
 
-      <TextArea
-        id="comment"
-        type="text"
-        label="Dodatni komentar"
-        placeholder="Ukoliko imate još pitanja, slobodno pitajte :)"
-        error={touched.comment && errors.comment}
-        value={values.comment}
-        onChange={handleChange}
-        onBlur={handleBlur}
-        style={{ height: "100px" }}
-      />
-      <button
-        type="button"
-        className="outline"
-        onClick={() => {
-          if (window.confirm("Jeste li sigurni da želite poništiti unos?"))
-            handleReset()
+const App = () => {
+  const { t, i18n } = useTranslation()
+
+  return (
+    <div className="app">
+      <Formik
+        user={{
+          email: "",
+          firstName: "",
+          lastName: "",
+          personNum: "",
+          date: "",
+          date2: "",
+          apartmentNum: "",
+          comment: "",
         }}
-        disabled={!dirty || isSubmitting}
+        initialValues={{
+          email: "",
+          firstName: "",
+          lastName: "",
+          personNum: "",
+          date: "",
+          date2: "",
+          apartmentNum: "",
+          comment: "",
+        }}
+        validationSchema={Yup.object().shape({
+          firstName: Yup.string()
+            .strict(true)
+            .min(2, t("form.firstNameMin"))
+            .required(t("form.firstNameReq")),
+          lastName: Yup.string()
+            .min(2, t("form.lastNameMin"))
+            .required(t("form.lastNameReq")),
+          email: Yup.string()
+            .email(t("form.emailError"))
+            .required(t("form.emailReq")),
+          personNum: Yup.number()
+            .min(1, t("form.personNumMin"))
+            .max(20, t("form.personNumMax"))
+            .required(t("form.personNumReq")),
+          date: Yup.date().required(t("form.dateReq")),
+          date2: Yup.date().required(t("form.dateReq")),
+          apartmentNum: Yup.number()
+            .min(1, t("form.apartmentMin"))
+            .max(6, t("form.apartmentMax"))
+            .required(t("form.apartmentReq")),
+          comment: Yup.string(),
+        })}
+        handleSubmit={(payload, { setSubmitting }) => {
+          alert(t("form.alert") + payload.firstName + " :)")
+          setSubmitting(false)
+        }}
+        mapPropsToValues={({ user }) => ({
+          ...user,
+        })}
+        displayName="MyForm"
       >
-        Poništi
-      </button>
-      <button type="submit" disabled={isSubmitting}>
-        Pošalji
-      </button>
-      {/* <DisplayFormikState {...props} /> */}
-    </form>
+        {props => {
+          const {
+            values,
+            touched,
+            errors,
+            dirty,
+            handleChange,
+            handleBlur,
+            handleSubmit,
+            handleReset,
+            isSubmitting,
+            setFieldTouched,
+          } = props
+          return (
+            <WithTranslateFormErrors
+              errors={errors}
+              touched={touched}
+              setFieldTouched={setFieldTouched}
+            >
+              <form
+                onSubmit={() => {
+                  if (window.confirm(t("form.confirm"))) handleSubmit()
+                }}
+              >
+                <TextInput
+                  id="firstName"
+                  type="text"
+                  label={t("form.firstName")}
+                  placeholder={t("form.firstNamePlaceholder")}
+                  error={touched.firstName && errors.firstName}
+                  value={values.firstName}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                />
+                <TextInput
+                  id="lastName"
+                  type="text"
+                  label={t("form.lastName")}
+                  placeholder={t("form.lastNamePlaceholder")}
+                  error={touched.lastName && errors.lastName}
+                  value={values.lastName}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                />
+                <TextInput
+                  id="email"
+                  type="email"
+                  label={t("form.email")}
+                  placeholder={t("form.emailPlaceholder")}
+                  error={touched.email && errors.email}
+                  value={values.email}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                />
+                <TextInput
+                  id="personNum"
+                  type="number"
+                  label={t("form.personNum")}
+                  placeholder={t("form.personNumPlaceholder")}
+                  error={touched.personNum && errors.personNum}
+                  value={values.personNum}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                />
+                <TextInput
+                  id="date"
+                  type="date"
+                  label={t("form.dateArrival")}
+                  placeholder={t("form.date1Placeholder")}
+                  error={touched.date && errors.date}
+                  value={values.date}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                />
+                <TextInput
+                  id="date2"
+                  type="date"
+                  label={t("form.dateDeparture")}
+                  placeholder={t("form.date2Placeholder")}
+                  error={touched.date2 && errors.date2}
+                  value={values.date2}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                />
+                <TextInput
+                  id="apartmentNum"
+                  type="number"
+                  label={t("form.apartmentNum")}
+                  placeholder={t("form.apartmentNumPlaceholder")}
+                  error={touched.apartmentNum && errors.apartmentNum}
+                  value={values.apartmentNum}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                />
+
+                <TextArea
+                  id="comment"
+                  type="text"
+                  label={t("form.comment")}
+                  placeholder={t("form.commentPlaceholder")}
+                  error={touched.comment && errors.comment}
+                  value={values.comment}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  style={{ height: "100px" }}
+                />
+                <button
+                  type="button"
+                  className="outline"
+                  onClick={() => {
+                    if (window.confirm(t("form.resetConfirm"))) handleReset()
+                  }}
+                  disabled={!dirty || isSubmitting}
+                >
+                  {t("form.resetButton")}
+                </button>
+                <button type="submit" disabled={isSubmitting}>
+                  {t("form.sendButton")}
+                </button>
+                {/* <DisplayFormikState {...props} /> */}
+              </form>
+            </WithTranslateFormErrors>
+          )
+        }}
+      </Formik>
+    </div>
   )
 }
-
-const MyEnhancedForm = formikEnhancer(MyForm)
-
-const App = () => (
-  <div className="app">
-    <MyEnhancedForm
-      user={{
-        email: "",
-        firstName: "",
-        lastName: "",
-        personNum: "",
-        date: "",
-        date2: "",
-        apartmentNum: "",
-        comment: "",
-      }}
-    />
-  </div>
-)
-
 export default App

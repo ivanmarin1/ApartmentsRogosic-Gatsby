@@ -2,12 +2,11 @@ import React, { useState } from "react"
 import Select from "@material-ui/core/Select"
 import MenuItem from "@material-ui/core/MenuItem"
 import { useTranslation } from "react-i18next"
-
 import hrLogo from "../images/languageIcons/hr.png"
 import enLogo from "../images/languageIcons/en.png"
 
 const LanguageMenu = props => {
-  const { t, i18n } = useTranslation()
+  const { i18n } = useTranslation()
 
   const [values, setValues] = useState({
     language: "en",
