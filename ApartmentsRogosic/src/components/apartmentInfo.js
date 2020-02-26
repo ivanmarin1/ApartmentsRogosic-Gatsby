@@ -22,7 +22,7 @@ const ApartmentInfo = ({ apartment }) => (
               dir
               relativeDirectory
               childImageSharp {
-                fluid {
+                fluid(maxWidth: 3150) {
                   ...GatsbyImageSharpFluid
                 }
               }
@@ -39,7 +39,7 @@ const ApartmentInfo = ({ apartment }) => (
               dir
               relativeDirectory
               childImageSharp {
-                fluid {
+                fluid(maxWidth: 3150) {
                   ...GatsbyImageSharpFluid
                 }
               }
@@ -56,7 +56,7 @@ const ApartmentInfo = ({ apartment }) => (
               dir
               relativeDirectory
               childImageSharp {
-                fluid {
+                fluid(maxWidth: 3150) {
                   ...GatsbyImageSharpFluid
                 }
               }
@@ -73,7 +73,7 @@ const ApartmentInfo = ({ apartment }) => (
               dir
               relativeDirectory
               childImageSharp {
-                fluid {
+                fluid(maxWidth: 3150) {
                   ...GatsbyImageSharpFluid
                 }
               }
@@ -90,7 +90,7 @@ const ApartmentInfo = ({ apartment }) => (
               dir
               relativeDirectory
               childImageSharp {
-                fluid {
+                fluid(maxWidth: 3150) {
                   ...GatsbyImageSharpFluid
                 }
               }
