@@ -26,6 +26,9 @@ const ContactPage = () => {
               +385 95/813-1807
             </p>
             <p>{t("contact.address")} Kalina 68, 21405 Milna, Brač</p>
+            <a href="https://api.whatsapp.com/send?phone=385991980646">
+              Whatsapp
+            </a>
           </div>
           <div>
             <Image filename="house-with-sea.jpg" alt="Main house"></Image>
