@@ -1,4 +1,6 @@
 import i18next from "i18next"
+import { Apartments } from "../pages/apartments"
+import React from "react"
 
 i18next.init({
   fallbackLng: "en",

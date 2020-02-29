@@ -23,12 +23,20 @@
   "apartments": {
     "subtitle": "APARTMANI",
     "intro": "Pretražite naše apartmane i pronađite smještaj koji odgovara vašim potrebama. Ukoliko nađete željeni apartman, slobodno rezervirajte, a mi ćemo vam odgovoriti u što kraćem roku :)",
-    "button": "Apartman"
+    "button": "Apartman",
+    "bookButton": "REZERVIRAJ",
+    "apartment1": "Apartman 1",
+    "apartment2": "Apartman 2",
+    "apartment3": "Apartman 3",
+    "apartment4": "Apartman 4",
+    "apartment5": "Apartman 5"
   },
   "reservation": {
+    "subtitle": "REZERVACIJE",
     "text": "Ukoliko želite provesti odmor kod nas, slobodno ispunite donji formular te ćemo vam se mi javiti u najkraćem mogućem roku :)"
   },
   "contact": {
+    "subtitle": "KONTAKT",
     "name": "Ime prezime: ",
     "email": "Email: ",
     "phone": "Broj mobitela: ",

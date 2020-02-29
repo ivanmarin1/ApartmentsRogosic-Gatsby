@@ -23,7 +23,13 @@
   "apartments": {
     "subtitle": "APARTMENTS",
     "intro": "Search our apartments and find the accommodation that suits your needs. If you find the apartment you want, please feel free to book and we will reply as soon as possible :)",
-    "button": "Apartment"
+    "button": "Apartment",
+    "bookButton": "BOOK NOW",
+    "apartment1": "Apartment 1",
+    "apartment2": "Apartment 2",
+    "apartment3": "Apartment 3",
+    "apartment4": "Apartment 4",
+    "apartment5": "Apartment 5"
   },
   "reservation": {
     "subtitle": "BOOKING",
