@@ -89,7 +89,7 @@ const TextArea = ({
 }
 
 const App = () => {
-  const { t, i18n } = useTranslation()
+  const { t } = useTranslation()
 
   return (
     <div className="app">
@@ -165,11 +165,7 @@ const App = () => {
               touched={touched}
               setFieldTouched={setFieldTouched}
             >
-              <form
-                onSubmit={() => {
-                  if (window.confirm(t("form.confirm"))) handleSubmit()
-                }}
-              >
+              <form onSubmit={handleSubmit}>
                 <TextInput
                   id="firstName"
                   type="text"
