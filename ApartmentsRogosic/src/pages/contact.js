@@ -29,6 +29,8 @@ const ContactPage = () => {
             <a href="https://api.whatsapp.com/send?phone=385991980646">
               Whatsapp
             </a>
+            <a href="viber://chat?number=385991980646">Viber</a>
+            <a href="viber://contact?number=%2B385991980646">Viber 2</a>
           </div>
           <div>
             <Image filename="house-with-sea.jpg" alt="Main house"></Image>
