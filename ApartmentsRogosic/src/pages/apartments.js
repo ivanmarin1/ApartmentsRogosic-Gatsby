@@ -120,19 +120,17 @@ export class Apartments extends React.Component {
 
   // function which is called from button click
   _onButtonClick(value) {
-    {
-      //show apartment which corresponds to button value and active language
-      this.props.apartment.map(edge => {
-        if (
-          edge.node.frontmatter.apartment === value &&
-          edge.node.frontmatter.language === this.state.lang
-        ) {
-          this.setState({
-            ActiveApart: edge,
-          })
-        }
-      })
-    }
+    //show apartment which corresponds to button value and active language
+    this.props.apartment.map(edge => {
+      if (
+        edge.node.frontmatter.apartment === value &&
+        edge.node.frontmatter.language === this.state.lang
+      ) {
+        this.setState({
+          ActiveApart: edge,
+        })
+      }
+    })
   }
 
   addActiveClass(e) {
