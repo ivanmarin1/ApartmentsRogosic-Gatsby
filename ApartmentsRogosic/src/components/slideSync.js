@@ -2,8 +2,12 @@ import React, { Component } from "react"
 import Slider from "react-slick"
 import Img from "gatsby-image"
 import style from "../styles/apartments.module.css"
-// import "slick-carousel/slick/slick.css"
-// import "slick-carousel/slick/slick-theme.css"
+import Lightbox from "react-image-lightbox"
+import "react-image-lightbox/style.css" // This only needs to be imported once in your app
+import "slick-carousel/slick/slick.css"
+import "slick-carousel/slick/slick-theme.css"
+
+let photos = []
 
 export default class AsNavFor extends Component {
   constructor(props) {
@@ -11,17 +15,37 @@ export default class AsNavFor extends Component {
     this.state = {
       nav1: null,
       nav2: null,
+      isOpen: false,
+      photoIndex: 0,
     }
+    this.props.apart.map(edge =>
+      photos.push(edge.node.childImageSharp.fluid.src)
+    )
   }
   componentDidMount() {
     this.setState({
       nav1: this.slider1,
       nav2: this.slider2,
     })
+    photos = []
+    this.props.apart.map(edge =>
+      photos.push(edge.node.childImageSharp.fluid.src)
+    )
+  }
+  handleClickImage = (e, index) => {
+    e && e.preventDefault()
+    this.setState({
+      photoIndex: index,
+      isOpen: true,
+    })
   }
   render() {
+    const isOpen = this.state.isOpen
+    const photoIndex = this.state.photoIndex
+    console.log("index: ", photoIndex)
     return (
       <div className={style.slider}>
+        {/* <img src={this.props.apart[1].node.childImageSharp.fluid.src}></img> */}
         <Slider
           asNavFor={this.state.nav2}
           ref={slider => (this.slider1 = slider)}
@@ -33,8 +57,8 @@ export default class AsNavFor extends Component {
           autoplaySpeed={5000}
           adaptiveHeight={true}
         >
-          {this.props.apart.map(edge => (
-            <div>
+          {this.props.apart.map((edge, index) => (
+            <div onClick={e => this.handleClickImage(e, index)}>
               <Img fluid={edge.node.childImageSharp.fluid}></Img>
             </div>
           ))}
@@ -57,6 +81,24 @@ export default class AsNavFor extends Component {
             </div>
           ))}
         </Slider>
+        {isOpen && (
+          <Lightbox
+            mainSrc={photos[photoIndex]}
+            onCloseRequest={() => this.setState({ isOpen: false })}
+            nextSrc={photos[(photoIndex + 1) % photos.length]}
+            prevSrc={photos[(photoIndex + photos.length - 1) % photos.length]}
+            onMovePrevRequest={() =>
+              this.setState({
+                photoIndex: (photoIndex + photos.length - 1) % photos.length,
+              })
+            }
+            onMoveNextRequest={() =>
+              this.setState({
+                photoIndex: (photoIndex + 1) % photos.length,
+              })
+            }
+          />
+        )}
       </div>
     )
   }
