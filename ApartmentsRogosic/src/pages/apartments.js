@@ -146,7 +146,6 @@ export class Apartments extends React.Component {
     i18next.on("languageChanged", () => {
       this.onChangeLanguageState()
     })
-    console.log("apartList: ", this.props.apartList.apartment3)
     const apartmentButtons = this.props.apartList.map(
       ({ text, number, shortName }) => (
         <button
