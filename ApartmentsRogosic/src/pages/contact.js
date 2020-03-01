@@ -3,7 +3,7 @@ import SplitScreen from "../components/splitScreen"
 import SEO from "../components/seo"
 import TitleBar from "../components/titleBar"
 import Image from "../components/image"
-// import GoogleMaps from "../components/gMaps"
+import GoogleMaps from "../components/gMaps"
 import styles from "../styles/layout.module.css"
 import { useTranslation } from "react-i18next"
 
@@ -38,7 +38,7 @@ const ContactPage = () => {
         </SplitScreen>
         <div style={{ marginBottom: "20px" }}>
           <h2>{t("contact.mapTitle")}</h2>
-          {/* <GoogleMaps latitude="43.356959" longitude="16.952332"></GoogleMaps> */}
+          <GoogleMaps />
         </div>
       </div>
     </>

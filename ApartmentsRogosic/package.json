@@ -20,6 +20,8 @@
     "gatsby-source-googlemaps-static": "^1.0.5",
     "gatsby-transformer-remark": "^2.6.52",
     "gatsby-transformer-sharp": "^2.3.13",
+    "google-map-react": "^1.1.6",
+    "google-maps-react": "^2.0.2",
     "i18next": "^19.2.0",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
