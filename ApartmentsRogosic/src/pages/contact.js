@@ -6,6 +6,7 @@ import Image from "../components/image"
 import GoogleMaps from "../components/gMaps"
 import styles from "../styles/layout.module.css"
 import { useTranslation } from "react-i18next"
+import SocialButton from "../components/socialButton"
 
 const ContactPage = () => {
   const { t } = useTranslation()
@@ -26,9 +27,24 @@ const ContactPage = () => {
               +385 95/813-1807
             </p>
             <p>{t("contact.address")} Kalina 68, 21405 Milna, Brač</p>
-            <a href="https://api.whatsapp.com/send?phone=385991980646">
-              Whatsapp
-            </a>
+            <SocialButton
+              color="#01e675"
+              socialMedia="Whatsapp"
+              icon="whatsapp.png"
+              link="https://api.whatsapp.com/send?phone=385991980646"
+            />
+            <SocialButton
+              color="#574e92"
+              socialMedia="Viber"
+              icon="viber.png"
+              link=""
+            />
+            <SocialButton
+              color="#365899"
+              socialMedia="Facebook"
+              icon="facebook.png"
+              link=""
+            />
             <a href="viber://chat?number=385991980646">Viber</a>
             <a href="viber://contact?number=%2B385991980646">Viber 2</a>
           </div>
