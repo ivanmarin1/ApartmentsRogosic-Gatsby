@@ -8,6 +8,33 @@ import styles from "../styles/layout.module.css"
 import { useTranslation } from "react-i18next"
 import SocialButton from "../components/socialButton"
 
+const socialMedia = [
+  {
+    color: "#01e675",
+    text: "Whatsapp",
+    icon: "whatsapp.png",
+    link: "https://api.whatsapp.com/send?phone=385991980646",
+  },
+  {
+    color: "#574e92",
+    text: "Viber",
+    icon: "viber.png",
+    link: "",
+  },
+  {
+    color: "#365899",
+    text: "Facebook",
+    icon: "facebook.png",
+    link: "",
+  },
+  {
+    color: "#dd2a7b",
+    text: "Instagram",
+    icon: "instagram.png",
+    link: "https://instagram.com/rogosicosibova?igshid=iyu99ky2d7nv",
+  },
+]
+
 const ContactPage = () => {
   const { t } = useTranslation()
   return (
@@ -27,24 +54,14 @@ const ContactPage = () => {
               +385 95/813-1807
             </p>
             <p>{t("contact.address")} Kalina 68, 21405 Milna, Brač</p>
-            <SocialButton
-              color="#01e675"
-              socialMedia="Whatsapp"
-              icon="whatsapp.png"
-              link="https://api.whatsapp.com/send?phone=385991980646"
-            />
-            <SocialButton
-              color="#574e92"
-              socialMedia="Viber"
-              icon="viber.png"
-              link=""
-            />
-            <SocialButton
-              color="#365899"
-              socialMedia="Facebook"
-              icon="facebook.png"
-              link=""
-            />
+            {socialMedia.map(media => (
+              <SocialButton
+                color={media.color}
+                text={media.text}
+                icon={media.icon}
+                link={media.link}
+              ></SocialButton>
+            ))}
             <a href="viber://chat?number=385991980646">Viber</a>
             <a href="viber://contact?number=%2B385991980646">Viber 2</a>
           </div>
