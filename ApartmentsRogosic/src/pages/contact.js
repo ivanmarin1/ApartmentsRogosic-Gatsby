@@ -19,7 +19,13 @@ const socialMedia = [
     color: "#574e92",
     text: "Viber",
     icon: "viber.png",
-    link: "",
+    link: "viber://contact?number=%2B385991980646",
+  },
+  {
+    color: "#574e92",
+    text: "Viber 2",
+    icon: "viber.png",
+    link: "viber://contact?number=385991980646",
   },
   {
     color: "#365899",
