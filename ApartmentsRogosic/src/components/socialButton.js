@@ -1,7 +1,7 @@
 import React from "react"
 import Image from "../components/image"
 
-const Button = ({ color, socialMedia, icon, link }) => {
+const Button = ({ color, text, icon, link }) => {
   return (
     <div
       style={{
@@ -11,6 +11,7 @@ const Button = ({ color, socialMedia, icon, link }) => {
         border: "1px solid",
         borderColor: color, //props
         margin: "20px 0",
+        borderRadius: "2px",
       }}
     >
       <div
@@ -43,7 +44,7 @@ const Button = ({ color, socialMedia, icon, link }) => {
           href={link}
         >
           {/* props */}
-          {socialMedia}
+          {text}
         </a>
       </div>
     </div>
