@@ -1,53 +1,29 @@
 import React from "react"
 import Image from "../components/image"
+import style from "../styles/socialButton.module.css"
 
 const Button = ({ color, text, icon, link }) => {
   return (
-    <div
-      style={{
-        width: "200px",
-        display: "grid",
-        gridTemplateColumns: "1fr 3fr",
-        border: "1px solid",
-        borderColor: color, //props
-        margin: "20px 0",
-        borderRadius: "2px",
-      }}
-    >
+    <a href={link} target="_blank">
       <div
+        className={style.button}
         style={{
-          width: "40px",
-          padding: "5px",
-          display: "block",
-          margin: "0 auto",
+          borderColor: color, //props
         }}
       >
-        {/* props */}
-        <Image filename={icon} />
-      </div>
-      <div
-        style={{
-          backgroundColor: color, //props
-          textAlign: "center",
-          verticalAlign: "middle",
-          lineHeight: "37px",
-        }}
-      >
-        <a
+        <div className={style.icon}>
+          <Image filename={icon} />
+        </div>
+        <div
+          className={style.textWrapper}
           style={{
-            textDecoration: "none",
-            color: "white",
-            fontSize: "16px",
-            fontWeight: "bold",
+            backgroundColor: color, //props
           }}
-          // props
-          href={link}
         >
-          {/* props */}
-          {text}
-        </a>
+          <p className={style.text}>{text}</p>
+        </div>
       </div>
-    </div>
+    </a>
   )
 }
 

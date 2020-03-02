@@ -31,7 +31,7 @@ const socialMedia = [
     color: "#365899",
     text: "Facebook",
     icon: "facebook.png",
-    link: "",
+    link: "https://www.facebook.com/apartmani.rogosic.osibova/",
   },
   {
     color: "#dd2a7b",
@@ -60,14 +60,23 @@ const ContactPage = () => {
               +385 95/813-1807
             </p>
             <p>{t("contact.address")} Kalina 68, 21405 Milna, Brač</p>
-            {socialMedia.map(media => (
-              <SocialButton
-                color={media.color}
-                text={media.text}
-                icon={media.icon}
-                link={media.link}
-              ></SocialButton>
-            ))}
+            <div
+              style={{
+                display: "grid",
+                gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+                gridColumnGap: "5px",
+                margin: "50px 0",
+              }}
+            >
+              {socialMedia.map(media => (
+                <SocialButton
+                  color={media.color}
+                  text={media.text}
+                  icon={media.icon}
+                  link={media.link}
+                ></SocialButton>
+              ))}
+            </div>
             <a href="viber://chat?number=385991980646">Viber</a>
             <a href="viber://contact?number=%2B385991980646">Viber 2</a>
           </div>
