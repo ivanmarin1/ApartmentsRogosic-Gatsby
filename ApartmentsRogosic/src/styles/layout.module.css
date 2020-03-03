@@ -29,6 +29,10 @@ p {
   max-height: 700px;
 }
 
+.info > p {
+  text-align: left;
+}
+
 @media screen and (max-width: 600px) {
   .mainContainer {
     width: 85%;
