@@ -7,6 +7,7 @@ import GoogleMaps from "../components/gMaps"
 import styles from "../styles/layout.module.css"
 import { useTranslation } from "react-i18next"
 import SocialButton from "../components/socialButton"
+import MapV2 from "../components/mapsV2"
 
 const socialMedia = [
   {
@@ -100,6 +101,7 @@ const ContactPage = () => {
         </SplitScreen>
         <div style={{ marginBottom: "20px" }}>
           <h2>{t("contact.mapTitle")}</h2>
+          {/* <MapV2></MapV2> */}
           <GoogleMaps />
         </div>
       </div>
