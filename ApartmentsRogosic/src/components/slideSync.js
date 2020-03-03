@@ -6,6 +6,7 @@ import Lightbox from "react-image-lightbox"
 import "react-image-lightbox/style.css" // This only needs to be imported once in your app
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
+import Image from "./image"
 
 let photos = []
 
@@ -56,6 +57,8 @@ export default class AsNavFor extends Component {
           autoplay={true}
           autoplaySpeed={5000}
           adaptiveHeight={true}
+          arrows={false}
+          style={{ cursor: "pointer" }}
         >
           {this.props.apart.map((edge, index) => (
             <div onClick={e => this.handleClickImage(e, index)}>
@@ -74,6 +77,7 @@ export default class AsNavFor extends Component {
           centerMode={true}
           dots={false}
           arrows={false}
+          style={{ cursor: "pointer" }}
         >
           {this.props.apart.map(edge => (
             <div>
