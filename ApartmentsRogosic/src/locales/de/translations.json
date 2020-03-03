@@ -1,0 +1,82 @@
+{
+  "site": {
+    "heading": "Apartments Rogošić",
+    "button": "JETZT BUCHEN",
+    "footer": "Apartments Rogošić"
+  },
+  "menuItems": {
+    "first": "HOME",
+    "second": "ÜBER UNS",
+    "third": "DIE APARTMENTS",
+    "fourth": "BUCHEN",
+    "fifth": "KONTAKT"
+  },
+  "home": {
+    "subtitle": "WILLKOMMEN ",
+    "text": "Unser Haus befindet sich im Südwesten der Insel Brač in der kleinen geschützten Bucht von Osibova direkt am Meer :)",
+    "blueText": "Wir freuen uns auf Ihren Besuch und wünschen Ihnen einen angenehmen Aufenthalt! "
+  },
+  "about": {
+    "subtitle": "URLAUB BEI ROGOSIC OSIBOVA",
+    "text": "Lassen Sie den Alltag hinter sich und entspannen auf Ihrem Balkon oder der Terrasse bei Ausblicken bis zum Horizont. Nur wenige Schritte trennen Sie vom Sprung ins kristallklare Wasser, oder verbringen Sie einen relaxten Tag im Liegestuhl am Meer. Zum Ausklang eines sonnenverwöhnten Tages lauschen Sie den Grillen beim abendlichen Konzert und lassen kroatische Impressionen Revue passieren. Nach einem entspannten Spaziergang erreichen Sie das ursprüngliche Städtchen Milna mit dem Yachthafen, Restaurants, Cafés und verschiedenen Einkaufsmöglichkeiten. Wem das Strandleben zu entspannt werden sollte kann auch einen Ausflug über die Insel unternehmen und eine der vielen Sehenswürdigkeiten kennen lernen. "
+  },
+  "apartments": {
+    "subtitle": "UNSERE APARTMENTS",
+    "intro": "Durchsuchen Sie unsere Apartments und finden Sie die Unterkunft, die Ihren Bedürfnissen entspricht. Wenn Sie die gewünschte Wohnung finden, können Sie diese gerne buchen und wir werden Ihnen so schnell wie möglich antworten :)",
+    "button": "Apartment",
+    "bookButton": "JETZT BUCHEN",
+    "apartment1": "Apartment 1",
+    "apartment2": "Apartment 2",
+    "apartment3": "Apartment 3",
+    "apartment4": "Apartment 4",
+    "apartment5": "Apartment 5"
+  },
+  "reservation": {
+    "subtitle": "BUCHEN",
+    "text": "Wenn Sie Ihren Urlaub bei uns verbringen möchten, füllen Sie bitte das folgende Formular aus und wir werden uns so schnell wie möglich bei Ihnen melden :)"
+  },
+  "contact": {
+    "subtitle": "KONTAKT",
+    "name": "Vollständiger Name: ",
+    "email": "Email: ",
+    "phone": "Telefonnummer: ",
+    "address": "Addresse: ",
+    "mapTitle": "Unsere Kartenposition:"
+  },
+  "form": {
+    "firstNameMin": "Surely your name is longer than that :)",
+    "firstNameReq": "Name is required.",
+    "lastNameMin": "Surely your last name is longer than that :)",
+    "lastNameReq": "Last name is required.",
+    "emailError": "Invalid email address.",
+    "emailReq": "Email is required.",
+    "personNumMin": "There are certainly more than 0 of you.",
+    "personNumMax": "We have nowhere to put so many people :)",
+    "personNumReq": "Number of persons required.",
+    "dateReq": "Date is required.",
+    "apartmentMin": "We do not own a zero apartment :)",
+    "apartmentMax": "We don't have that many apartments :)",
+    "apartmentReq": "You must take at least one apartment :)",
+    "alert": "Thank you for your booking request",
+    "confirm": "Are you sure you want to submit a request??",
+    "firstName": "First name",
+    "firstNamePlaceholder": "John",
+    "lastName": "Last name",
+    "lastNamePlaceholder": "Doe",
+    "email": "Email",
+    "emailPlaceholder": "John@doe.com",
+    "personNum": "Number of persons",
+    "personNumPlaceholder": "Enter the number of people",
+    "dateArrival": "Date of arrival",
+    "date1Placeholder": "Please select an arrival date",
+    "dateDeparture": "Date of departure",
+    "date2Placeholder": "Select a departure date",
+    "apartmentNum": "Number of the desired apartment",
+    "apartmentNumPlaceholder": "Which apartment would you like",
+    "comment": "Additional comment",
+    "commentPlaceholder": "If you have some more questions, feel free to ask :)",
+    "resetConfirm": "Are you sure you want to reset the entry?",
+    "resetButton": "Reset",
+    "sendButton": "Submit"
+  }
+}

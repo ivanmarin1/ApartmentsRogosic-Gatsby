@@ -1,0 +1,82 @@
+{
+  "site": {
+    "heading": "Apartments Rogošić",
+    "button": "BOOK NOW",
+    "footer": "Apartments Rogošić"
+  },
+  "menuItems": {
+    "first": "HOME",
+    "second": "DE NOI",
+    "third": "APPARTAMENTI",
+    "fourth": "PRENOTAZIONE",
+    "fifth": "CONTATTO"
+  },
+  "home": {
+    "subtitle": " BENVENUTI ",
+    "text": "La nostra casa si trova all margine di mare nella piccola, proteta valle di Osibova, alla parte nord-ovest di isola di Brač! Cerca tra i nostri appartamenti e scegline uno adatto alle tue esigenze. Quando sei pronto per prenotare, non esitare a compilare il nostro modulo di prenotazione :)",
+    "blueText": "Non vediamo l'ora del tuo arrivo e ti auguriamo un piacevole soggiorno con noi!"
+  },
+  "about": {
+    "subtitle": "DE NOI",
+    "text": "Dimenticate tutti i problemi e rillasatevi all terazzo e godete vi bellissima vista sull mare e' sul vicina isola di Hvar. Azzuro cristalino mare velocamente vi tirera fuori dalla brandina e vi troverete dopo pocci passi dentro. Con il concerto di cicale e meravigle di posto acompaginiate vostra giornata o fatte due passi fino al piccolo ma vivace paeziono Milna. Il paese e atrezzato di varii ristoranti, caffe, marina, posta, fornai, negozzi. Vale la pena visitare e fare l'esperienza notturno delle navi nell porto. A chi piace un riposo piu attivo si posono trovare tante cose sull isola di Brač e paesani sarrano lieti di aiutarvi. "
+  },
+  "apartments": {
+    "subtitle": "GLI APPARTAMENTI",
+    "intro": "Cerca i nostri appartamenti e trova l'alloggio adatto alle tue esigenze. Se trovi l'appartamento che desideri, non esitare a prenotare e ti risponderemo al più presto:)",
+    "button": "Appartamenti",
+    "bookButton": "BOOK NOW",
+    "apartment1": "Appartament 1",
+    "apartment2": "Appartamenti 2",
+    "apartment3": "Appartamenti 3",
+    "apartment4": "Appartamenti 4",
+    "apartment5": "Appartamenti 5"
+  },
+  "reservation": {
+    "subtitle": "PRENOTAZIONE",
+    "text": "Se vuoi trascorrere le tue vacanze con noi, non esitare a compilare il modulo sottostante e ti risponderemo al più presto :)"
+  },
+  "contact": {
+    "subtitle": "CONTATTO",
+    "name": "Nome e cognome: ",
+    "email": "Email: ",
+    "phone": "Numero di telefono: ",
+    "address": "Indirizzo: ",
+    "mapTitle": "La nostra posizione sulla mappa:"
+  },
+  "form": {
+    "firstNameMin": "Surely your name is longer than that :)",
+    "firstNameReq": "Name is required.",
+    "lastNameMin": "Surely your last name is longer than that :)",
+    "lastNameReq": "Last name is required.",
+    "emailError": "Invalid email address.",
+    "emailReq": "Email is required.",
+    "personNumMin": "There are certainly more than 0 of you.",
+    "personNumMax": "We have nowhere to put so many people :)",
+    "personNumReq": "Number of persons required.",
+    "dateReq": "Date is required.",
+    "apartmentMin": "We do not own a zero apartment :)",
+    "apartmentMax": "We don't have that many apartments :)",
+    "apartmentReq": "You must take at least one apartment :)",
+    "alert": "Thank you for your booking request",
+    "confirm": "Are you sure you want to submit a request??",
+    "firstName": "First name",
+    "firstNamePlaceholder": "John",
+    "lastName": "Last name",
+    "lastNamePlaceholder": "Doe",
+    "email": "Email",
+    "emailPlaceholder": "John@doe.com",
+    "personNum": "Number of persons",
+    "personNumPlaceholder": "Enter the number of people",
+    "dateArrival": "Date of arrival",
+    "date1Placeholder": "Please select an arrival date",
+    "dateDeparture": "Date of departure",
+    "date2Placeholder": "Select a departure date",
+    "apartmentNum": "Number of the desired apartment",
+    "apartmentNumPlaceholder": "Which apartment would you like",
+    "comment": "Additional comment",
+    "commentPlaceholder": "If you have some more questions, feel free to ask :)",
+    "resetConfirm": "Are you sure you want to reset the entry?",
+    "resetButton": "Reset",
+    "sendButton": "Submit"
+  }
+}
