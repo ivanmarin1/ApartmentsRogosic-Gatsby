@@ -55,13 +55,6 @@ module.exports = {
         icon: `src/images/sun.png`, // This path is relative to the root of the site.
       },
     },
-    {
-      resolve: `gatsby-source-googlemaps-static`,
-      options: {
-        key: `YOUR_GOOGLE_MAPS_STATIC_API_KEY`,
-        center: `LATITUDE,LONGITUDE || CITY,REGION`,
-      },
-    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
