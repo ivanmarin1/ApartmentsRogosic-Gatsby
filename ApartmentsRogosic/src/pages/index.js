@@ -24,7 +24,10 @@ const IndexPage = props => {
             <div>
               <p>{t("home.text")}</p>
               <Link to="/reservation/">
-                <button className={apartStyle.contrastButton}>
+                <button
+                  style={{ marginBottom: "37px" }}
+                  className={apartStyle.contrastButton}
+                >
                   {t("site.button")}
                 </button>
               </Link>
