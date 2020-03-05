@@ -13,9 +13,13 @@ const Header = () => {
         <div>
           <h1 id={styles.mainHeader}>{t("site.heading")}</h1>
         </div>
-        <div>
-          <h3 id={styles.sideHeader}>Osibova, Brač</h3>
-          <LanguageMenu />
+        <div id={styles.sideHeader}>
+          <div>
+            <h3 id={styles.sideText}>Osibova, Brač</h3>
+          </div>
+          <div id={styles.languageChanger}>
+            <LanguageMenu />
+          </div>
         </div>
       </div>
     </header>
