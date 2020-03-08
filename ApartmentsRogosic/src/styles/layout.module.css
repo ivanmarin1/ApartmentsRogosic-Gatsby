@@ -68,3 +68,8 @@ h3 {
   text-align: left;
   font-family: Muli, sans-serif;
 }
+
+#map > div {
+  position: relative !important;
+  height: 300px !important;
+}

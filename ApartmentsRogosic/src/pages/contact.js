@@ -99,10 +99,11 @@ const ContactPage = () => {
             <Image filename="house-with-sea.jpg" alt="Main house"></Image>
           </div>
         </SplitScreen>
-        <div style={{ marginBottom: "20px" }}>
+        <div id={styles.map} style={{ marginBottom: "20px" }}>
           <h2>{t("contact.mapTitle")}</h2>
-          {/* <MapV2></MapV2> */}
-          <GoogleMaps />
+          <div>
+            <MapV2 />
+          </div>
         </div>
       </div>
     </>
