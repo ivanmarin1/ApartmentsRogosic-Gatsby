@@ -5,6 +5,7 @@ import Image from "../components/image"
 import SplitScreen from "../components/splitScreen"
 import styles from "../styles/layout.module.css"
 import { useTranslation } from "react-i18next"
+import TextSplitter from "../components/textSplitter"
 
 const About = () => {
   const { t } = useTranslation()
@@ -18,7 +19,9 @@ const About = () => {
               <h3>{t("about.subtitle")}</h3>
             </TitleBar>
             <div>
-              <p>{t("about.text")}</p>
+              <p>
+                <TextSplitter text={t("about.text")} />
+              </p>
             </div>
           </div>
           <div style={{ marginBottom: "20px" }}>

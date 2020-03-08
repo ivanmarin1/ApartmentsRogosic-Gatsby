@@ -8,6 +8,7 @@ import styles from "../styles/layout.module.css"
 import apartStyle from "../styles/apartments.module.css"
 import { Link } from "gatsby"
 import { useTranslation } from "react-i18next"
+import TextSplitter from "../components/textSplitter"
 
 const IndexPage = props => {
   const { t } = useTranslation()
@@ -22,7 +23,9 @@ const IndexPage = props => {
               <h3>{t("home.subtitle")}</h3>
             </TitleBar>
             <div>
-              <p>{t("home.text")}</p>
+              <p>
+                <TextSplitter text={t("home.text")} />
+              </p>
               <Link to="/reservation/">
                 <button
                   style={{ marginBottom: "37px" }}
