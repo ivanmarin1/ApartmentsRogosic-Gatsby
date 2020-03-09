@@ -41,7 +41,7 @@ const TextInput = ({
       </Label>
       <input
         id={id}
-        name={label}
+        name={id}
         className="text-input"
         type={type}
         value={value}
