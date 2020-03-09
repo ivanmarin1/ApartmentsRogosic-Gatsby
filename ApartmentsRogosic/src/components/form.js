@@ -165,7 +165,13 @@ const App = () => {
               touched={touched}
               setFieldTouched={setFieldTouched}
             >
-              <form onSubmit={handleSubmit}>
+              <form
+                onSubmit={handleSubmit}
+                method="post"
+                data-netlify="true"
+                data-netlify-honeypot="bot-field"
+              >
+                <input type="hidden" name="form-name" value="contact" />
                 <TextInput
                   id="firstName"
                   type="text"
