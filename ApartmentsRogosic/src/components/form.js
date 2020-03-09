@@ -41,6 +41,7 @@ const TextInput = ({
       </Label>
       <input
         id={id}
+        name={label}
         className="text-input"
         type={type}
         value={value}
@@ -168,10 +169,11 @@ const App = () => {
               <form
                 onSubmit={handleSubmit}
                 method="post"
+                name="booking"
                 data-netlify="true"
                 data-netlify-honeypot="bot-field"
               >
-                <input type="hidden" name="form-name" value="contact" />
+                <input type="hidden" name="form-name" value="booking" />
                 <TextInput
                   id="firstName"
                   type="text"
