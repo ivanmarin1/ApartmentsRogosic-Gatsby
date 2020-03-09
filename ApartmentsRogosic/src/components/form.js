@@ -115,6 +115,8 @@ const App = () => {
           date2: "",
           apartmentNum: "",
           comment: "",
+          "bot-field": "",
+          "form-name": "contact",
         }}
         validationSchema={Yup.object().shape({
           firstName: Yup.string()
@@ -175,6 +177,7 @@ const App = () => {
                 data-netlify-honeypot="bot-field"
               >
                 <input type="hidden" name="form-name" value="booking" />
+                <input name="bot-field" type="hidden" />
                 <TextInput
                   id="firstName"
                   type="text"
