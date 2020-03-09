@@ -24,6 +24,7 @@ const ApartmentInfo = ({ apartment }) => {
           }
           collectionOneImages: allFile(
             filter: { relativeDirectory: { regex: "/Apartments/A1/" } }
+            sort: { fields: relativePath }
           ) {
             edges {
               node {
@@ -41,6 +42,7 @@ const ApartmentInfo = ({ apartment }) => {
           }
           collectionTwoImages: allFile(
             filter: { relativeDirectory: { regex: "/Apartments/A2/" } }
+            sort: { fields: relativePath }
           ) {
             edges {
               node {
@@ -58,6 +60,7 @@ const ApartmentInfo = ({ apartment }) => {
           }
           collectionThreeImages: allFile(
             filter: { relativeDirectory: { regex: "/Apartments/A3/" } }
+            sort: { fields: relativePath }
           ) {
             edges {
               node {
@@ -75,6 +78,7 @@ const ApartmentInfo = ({ apartment }) => {
           }
           collectionFourImages: allFile(
             filter: { relativeDirectory: { regex: "/Apartments/A4/" } }
+            sort: { fields: relativePath }
           ) {
             edges {
               node {
@@ -92,6 +96,7 @@ const ApartmentInfo = ({ apartment }) => {
           }
           collectionFiveImages: allFile(
             filter: { relativeDirectory: { regex: "/Apartments/A5/" } }
+            sort: { fields: relativePath }
           ) {
             edges {
               node {
