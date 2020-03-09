@@ -26,7 +26,6 @@ export class MapContainer extends Component {
       activeMarker: marker,
       showingInfoWindow: true,
     })
-
   openGoogleMaps = () => {
     if (
       navigator.platform.indexOf("iPhone") != -1 ||
@@ -67,7 +66,7 @@ export class MapContainer extends Component {
           lat: defaultProps.center.lat,
           lng: defaultProps.center.lng,
         }}
-        onTouchStart={this.openGoogleMaps}
+        // onClick={this.openGoogleMaps}
       >
         <Marker onClick={this.onMarkerClick} name={"Apartments Rogošić"} />
         <InfoWindow
