@@ -6,6 +6,14 @@ const mapStyles = {
   height: "300px",
 }
 
+const defaultProps = {
+  center: {
+    lat: 43.311909,
+    lng: 16.431781,
+  },
+  zoom: 15,
+}
+
 export class MapContainer extends Component {
   state = {
     showingInfoWindow: false, //Hides or the shows the infoWindow
@@ -19,6 +27,28 @@ export class MapContainer extends Component {
       showingInfoWindow: true,
     })
 
+  openGoogleMaps = () => {
+    if (
+      navigator.platform.indexOf("iPhone") != -1 ||
+      navigator.platform.indexOf("iPod") != -1 ||
+      navigator.platform.indexOf("iPad") != -1
+    )
+      window.open(
+        "maps://maps.google.com/maps?daddr=" +
+          defaultProps.center.lat +
+          "," +
+          defaultProps.center.lng +
+          "&amp;ll="
+      )
+    else
+      window.open(
+        "https://maps.google.com/maps?daddr=" +
+          defaultProps.center.lat +
+          "," +
+          defaultProps.center.lng +
+          "&amp;ll="
+      )
+  }
   onClose = props => {
     if (this.state.showingInfoWindow) {
       this.setState({
@@ -34,9 +64,10 @@ export class MapContainer extends Component {
         zoom={14}
         style={mapStyles}
         initialCenter={{
-          lat: 43.311909,
-          lng: 16.431781,
+          lat: defaultProps.center.lat,
+          lng: defaultProps.center.lng,
         }}
+        onTouchStart={this.openGoogleMaps}
       >
         <Marker onClick={this.onMarkerClick} name={"Apartments Rogošić"} />
         <InfoWindow
