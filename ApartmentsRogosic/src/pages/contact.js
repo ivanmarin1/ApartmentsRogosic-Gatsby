@@ -17,18 +17,6 @@ const socialMedia = [
     link: "https://api.whatsapp.com/send?phone=385991980646",
   },
   {
-    color: "#574e92",
-    text: "Viber",
-    icon: "viber.png",
-    link: "viber://contact?number=%2B385991980646",
-  },
-  {
-    color: "#574e92",
-    text: "Viber 2",
-    icon: "viber.png",
-    link: "viber://contact?number=385991980646",
-  },
-  {
     color: "#365899",
     text: "Facebook",
     icon: "facebook.png",
@@ -92,8 +80,6 @@ const ContactPage = () => {
                 ></SocialButton>
               ))}
             </div>
-            <a href="viber://chat?number=385991980646">Viber</a>
-            <a href="viber://contact?number=%2B385991980646">Viber 2</a>
           </div>
           <div>
             <Image filename="house-with-sea.jpg" alt="Main house"></Image>
