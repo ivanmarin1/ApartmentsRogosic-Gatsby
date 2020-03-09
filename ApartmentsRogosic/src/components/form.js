@@ -76,6 +76,7 @@ const TextArea = ({
       </Label>
       <textarea
         id={id}
+        name={id}
         className="text-input"
         type={type}
         value={value}
