@@ -122,7 +122,7 @@ const App = () => {
           apartmentNum: "",
           comment: "",
           "bot-field": "",
-          "form-name": "contact",
+          "form-name": "booking",
         }}
         validationSchema={Yup.object().shape({
           firstName: Yup.string()
@@ -147,20 +147,14 @@ const App = () => {
             .required(t("form.apartmentReq")),
           comment: Yup.string(),
         })}
-        handleSubmit={(values, actions) => {
-          fetch("/", {
+        handleSubmit={(payload, { setSubmitting }) => {
+          fetch("/?no-cache=1", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body: encode({ "form-name": "booking", ...values }),
+            body: encode({ "form-name": "booking", payload }),
           })
-            .then(() => {
-              alert("Success")
-              actions.resetForm()
-            })
-            .catch(() => {
-              alert("Error")
-            })
-            .finally(() => actions.setSubmitting(false))
+          alert(payload.email)
+          setSubmitting(false)
         }}
         mapPropsToValues={({ user }) => ({
           ...user,
@@ -187,7 +181,7 @@ const App = () => {
               setFieldTouched={setFieldTouched}
             >
               <form
-                onSubmit={handleSubmit}
+                onSubmit={() => handleSubmit}
                 name="booking"
                 data-netlify="true"
                 data-netlify-honeypot="bot-field"
