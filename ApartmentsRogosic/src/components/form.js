@@ -17,6 +17,12 @@ const Label = ({ error, className, children, ...props }) => {
   )
 }
 
+const encode = data => {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&")
+}
+
 const TextInput = ({
   type,
   id,
@@ -141,9 +147,20 @@ const App = () => {
             .required(t("form.apartmentReq")),
           comment: Yup.string(),
         })}
-        handleSubmit={(payload, { setSubmitting }) => {
-          alert(t("form.alert") + payload.firstName + " :)")
-          setSubmitting(false)
+        handleSubmit={(values, actions) => {
+          fetch("/", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: encode({ "form-name": "booking", ...values }),
+          })
+            .then(() => {
+              alert("Success")
+              actions.resetForm()
+            })
+            .catch(() => {
+              alert("Error")
+            })
+            .finally(() => actions.setSubmitting(false))
         }}
         mapPropsToValues={({ user }) => ({
           ...user,
@@ -171,7 +188,6 @@ const App = () => {
             >
               <form
                 onSubmit={handleSubmit}
-                method="post"
                 name="booking"
                 data-netlify="true"
                 data-netlify-honeypot="bot-field"
