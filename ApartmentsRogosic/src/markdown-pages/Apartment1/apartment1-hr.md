@@ -3,6 +3,7 @@ title: "Apartman 1"
 category: "Apartments"
 apartment: "A1"
 language: "hr"
+path: "/apartments/apartment1"
 ---
 
 Apartman 1 raspolaže sa prekrasnom (35 m2) terasom sa velikim pogledom na modro more, dvije kupaonice, raskošnom kuhinjom, tri spavaće sobe (dvije sa bračnim krevetom, a jedna sa kaučom na razvlačenje).
