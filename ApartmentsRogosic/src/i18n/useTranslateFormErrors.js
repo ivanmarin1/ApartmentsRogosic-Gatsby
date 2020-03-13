@@ -15,7 +15,7 @@ const useTranslateFormErrors = (errors, touched, setFieldTouched) => {
     return () => {
       i18n.off("languageChanged", lng => {})
     }
-  }, [errors])
+  }, [errors, touched, setFieldTouched, i18n])
 }
 
 const WithTranslateFormErrors = ({
