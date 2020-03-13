@@ -31,33 +31,7 @@ const Apartments2Page = ({
       link: "A5_Balcony (3)",
     },
   ]
-  const apartmentList = [
-    {
-      text: t("apartments.apartment1"),
-      number: "first",
-      shortName: "A1",
-    },
-    {
-      text: t("apartments.apartment2"),
-      number: "second",
-      shortName: "A2",
-    },
-    {
-      text: t("apartments.apartment3"),
-      number: "third",
-      shortName: "A3",
-    },
-    {
-      text: t("apartments.apartment4"),
-      number: "fourth",
-      shortName: "A4",
-    },
-    {
-      text: t("apartments.apartment5"),
-      number: "fifth",
-      shortName: "A5",
-    },
-  ]
+
   const Apartments = edges
     .filter(edge => edge.node.frontmatter.language === lang)
     .map((edge, index) => {

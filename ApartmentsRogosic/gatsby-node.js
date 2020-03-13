@@ -52,7 +52,5 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         apartMD: node.frontmatter.apartment,
       }, // additional data can be passed via context
     })
-    console.log("/" + node.frontmatter.apartment + "/")
-    console.log(node.frontmatter.apartment)
   })
 }

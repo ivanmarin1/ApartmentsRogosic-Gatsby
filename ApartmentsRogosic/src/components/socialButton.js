@@ -4,7 +4,7 @@ import style from "../styles/socialButton.module.css"
 
 const Button = ({ color, text, icon, link }) => {
   return (
-    <a href={link} target="_blank">
+    <a href={link} target="_blank" rel="noopener noreferrer">
       <div
         className={style.button}
         style={{

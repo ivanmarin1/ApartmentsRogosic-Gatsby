@@ -6,7 +6,6 @@ import Lightbox from "react-image-lightbox"
 import "react-image-lightbox/style.css" // This only needs to be imported once in your app
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
-import Image from "./image"
 
 let photos = []
 
@@ -61,7 +60,12 @@ export default class AsNavFor extends Component {
           style={{ cursor: "pointer" }}
         >
           {this.props.apart.map((edge, index) => (
-            <div onClick={e => this.handleClickImage(e, index)}>
+            <div
+              role="button"
+              tabIndex={index}
+              onClick={e => this.handleClickImage(e, index)}
+              onKeyUp={e => this.handleClickImage(e, index)}
+            >
               <Img fluid={edge.node.childImageSharp.fluid}></Img>
             </div>
           ))}

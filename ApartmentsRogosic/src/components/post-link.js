@@ -9,11 +9,13 @@ const PostLink = ({ apartment, image }) => (
       <div className={style.auth}>
         <h3>{apartment.frontmatter.title}</h3>
       </div>
-      <div className={style.image}>
-        <Image filename={image}></Image>
-      </div>
-      <div>
-        <p>{apartment.excerpt}</p>
+      <div className={style.grid}>
+        <div className={style.image}>
+          <Image filename={image}></Image>
+        </div>
+        <div>
+          <p>{apartment.excerpt}</p>
+        </div>
       </div>
     </div>
   </Link>
