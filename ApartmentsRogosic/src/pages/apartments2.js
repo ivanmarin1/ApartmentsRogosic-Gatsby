@@ -14,6 +14,23 @@ const Apartments2Page = ({
   const { t, i18n } = useTranslation()
   let lang = i18n.language
   if (lang === undefined) lang = "en"
+  const apartmentInitialImage = [
+    {
+      link: "A1_a(1)",
+    },
+    {
+      link: "A2_a_Terrace (1)",
+    },
+    {
+      link: "A3_Balcony (1)",
+    },
+    {
+      link: "A4_Balcony (1)",
+    },
+    {
+      link: "A5_Balcony (3)",
+    },
+  ]
   const apartmentList = [
     {
       text: t("apartments.apartment1"),
@@ -43,7 +60,15 @@ const Apartments2Page = ({
   ]
   const Apartments = edges
     .filter(edge => edge.node.frontmatter.language === lang)
-    .map(edge => <PostLink key={edge.node.id} apartment={edge.node} />)
+    .map((edge, index) => {
+      return (
+        <PostLink
+          key={edge.node.id}
+          apartment={edge.node}
+          image={apartmentInitialImage[index].link}
+        />
+      )
+    })
   return (
     <>
       <div className={styles.mainContainer}>
