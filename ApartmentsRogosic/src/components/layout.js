@@ -27,7 +27,7 @@ const Layout = ({ children }) => {
     },
     {
       text: t("menuItems.third"),
-      link: "/apartments/",
+      link: "/apartments2/",
       number: "three",
       iconName: "apartments.png",
     },
