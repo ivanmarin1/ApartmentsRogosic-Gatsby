@@ -4,6 +4,8 @@ import SlideSync from "../components/slideSync"
 import style from "../styles/apartments.module.css"
 import { useTranslation } from "react-i18next"
 import Price from "../components/apartmentPrice"
+import layoutStyle from "../styles/layout.module.css"
+import SEO from "../components/seo"
 
 const A1 = ["125.00 €", "155.00 €", "185.00 €", "155.00 €", "125.00 €"]
 const A2 = ["45.00 €", "55.00 €", "75.00 €", "55.00 €", "35.00 €"]
@@ -40,29 +42,35 @@ export default function Template({ data }) {
           currentPrice = A1
       }
       return (
-        <div>
-          <h2
-            style={{
-              color: "#7AAEEB",
-              textAlign: "center",
-            }}
-          >
-            {edge.node.frontmatter.title}
-          </h2>
-          <div className={style.slideshow}>
-            <SlideSync apart={data.allFile.edges}></SlideSync>
+        <>
+          <SEO title={edge.node.frontmatter.title} />
+          <div className={layoutStyle.mainContainer}>
+            <div style={{ textAlign: "left", fontSize: "17px" }}>
+              <Link to="/apartments/">&larr; {t("apartments.subtitle")}</Link>
+            </div>
+            <h2
+              style={{
+                color: "#7AAEEB",
+                textAlign: "center",
+              }}
+            >
+              {edge.node.frontmatter.title}
+            </h2>
+            <div className={style.slideshow}>
+              <SlideSync apart={data.allFile.edges}></SlideSync>
+            </div>
+            <div
+              className={style.description}
+              dangerouslySetInnerHTML={{ __html: edge.node.html }}
+            ></div>
+            <Price price={currentPrice} />
+            <Link to="/reservation/">
+              <button className={style.button}>
+                {t("apartments.bookButton")}
+              </button>
+            </Link>
           </div>
-          <div
-            className={style.description}
-            dangerouslySetInnerHTML={{ __html: edge.node.html }}
-          ></div>
-          <Price price={currentPrice} />
-          <Link to="/reservation/">
-            <button className={style.button}>
-              {t("apartments.bookButton")}
-            </button>
-          </Link>
-        </div>
+        </>
       )
     })
 }

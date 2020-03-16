@@ -1,7 +1,8 @@
 #tablePrice {
   border-collapse: collapse;
   width: 100%;
-  margin: 20px 0;
+  margin: 20px auto;
+  max-width: 600px;
 }
 
 #tablePrice td,
