@@ -1,6 +1,6 @@
 import "../styles/formik-demo.css"
 import React from "react"
-import { Formik } from "formik"
+import { Formik, validateYupSchema } from "formik"
 import * as Yup from "yup"
 import classnames from "classnames"
 import { useTranslation } from "react-i18next"
@@ -147,7 +147,7 @@ const App = () => {
             .required(t("form.apartmentReq")),
           comment: Yup.string(),
         })}
-        handleSubmit2={(payload, { setSubmitting }) => {
+        handleSubmit={(payload, { setSubmitting }) => {
           fetch("/?no-cache=1", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -189,7 +189,7 @@ const App = () => {
               setFieldTouched={setFieldTouched}
             >
               <form
-                onSubmit={() => handleSubmit2}
+                onSubmit={() => handleSubmit()}
                 name="booking"
                 data-netlify="true"
                 data-netlify-honeypot="bot-field"
