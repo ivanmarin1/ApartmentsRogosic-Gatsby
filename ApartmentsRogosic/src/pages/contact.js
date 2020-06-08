@@ -59,7 +59,9 @@ const ContactPage = () => {
               </p>
               <p>
                 {t("contact.address")}
-                Kalina 68, 21405 Milna, Brač
+                <a href="https://g.page/apartmentsrogosic?share">
+                  Kalina 68, 21405 Milna, Brač
+                </a>
               </p>
             </div>
             <div
