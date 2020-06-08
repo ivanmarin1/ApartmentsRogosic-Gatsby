@@ -148,18 +148,20 @@ const App = () => {
           comment: Yup.string(),
         })}
         handleSubmit={(payload, { setSubmitting }) => {
-          fetch("/?no-cache=1", {
-            method: "POST",
-            headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body: encode({ "form-name": "booking", payload }),
-          })
-            .then(() => {
-              alert("Success")
+          console.log("errors:" + errors)
+          if (errors == null)
+            fetch("/?no-cache=1", {
+              method: "POST",
+              headers: { "Content-Type": "application/x-www-form-urlencoded" },
+              body: encode({ "form-name": "booking", payload }),
             })
-            .catch(() => {
-              alert("Error")
-            })
-            .finally(() => setSubmitting(false))
+              .then(() => {
+                alert("Success")
+              })
+              .catch(() => {
+                alert("Error")
+              })
+              .finally(() => setSubmitting(false))
           // alert(payload.email)
           // setSubmitting(false)
         }}
