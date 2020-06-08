@@ -147,24 +147,21 @@ const App = () => {
             .required(t("form.apartmentReq")),
           comment: Yup.string(),
         })}
-        handleSubmit={(payload, { setSubmitting }) => {
-          console.log("errors:" + errors)
-          if (errors === null) console.log("errors in if:" + errors)
-
-          // fetch("/?no-cache=1", {
-          //   method: "POST",
-          //   headers: { "Content-Type": "application/x-www-form-urlencoded" },
-          //   body: encode({ "form-name": "booking", payload }),
-          // })
-          //   .then(() => {
-          //     alert("Success")
-          //   })
-          //   .catch(() => {
-          //     alert("Error")
-          //   })
-          //   .finally(() => setSubmitting(false))
-          // alert(payload.email)
-          // setSubmitting(false)
+        handleSubmit={(payload, { setSubmitting }, errors) => {
+          fetch("/?no-cache=1", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: encode({ "form-name": "booking", payload }),
+          })
+            .then(() => {
+              alert("Success")
+            })
+            .catch(() => {
+              alert("Error")
+            })
+            .finally(() => setSubmitting(false))
+          alert(payload.email)
+          setSubmitting(false)
         }}
         mapPropsToValues={({ user }) => ({
           ...user,
