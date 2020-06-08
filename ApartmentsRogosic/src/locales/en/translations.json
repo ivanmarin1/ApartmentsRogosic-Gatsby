@@ -31,7 +31,10 @@
     "apartment4": "Apartment 4",
     "apartment5": "Apartment 5",
     "equipment": "AMENITIES",
-    "equipment-text": "Besides standard furniture all flats are equipped with kettle, microwave oven and Senseo coffee maker. We provide lining, towels and hairdryer. A big barbecue is made available to our guests. We also have covered parking space for your car."
+    "equipment-text": "Besides standard furniture all flats are equipped with kettle, microwave oven and Senseo coffee maker. We provide lining, towels and hairdryer. A big barbecue is made available to our guests. We also have covered parking space for your car.",
+    "noSeason": "Outside of season",
+    "lowSeason": "Low season",
+    "highSeason": "High season"
   },
   "reservation": {
     "subtitle": "BOOKING",

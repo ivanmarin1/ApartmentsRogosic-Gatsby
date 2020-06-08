@@ -31,7 +31,13 @@
     "apartment4": "Apartment 4",
     "apartment5": "Apartment 5",
     "equipment": "AUSTATTUNG",
-    "equipment-text": "Jede Wohnung verfügt neben der Standard Ausstattung über Sat — TV, Wasserkocher, Mikrowelle, Klimaanlage und Senseo Kaffeemaschine. Natürlich bieten wir Ihnen Bettwäsche, Handtücher und Fön. Unseren Gästen steht ein großer Grill zur Verfügung. Auch Ihr Auto findet bei uns seinen Platz."
+    "equipment-text": "Jede Wohnung verfügt neben der Standard Ausstattung über Sat — TV, Wasserkocher, Mikrowelle, Klimaanlage und Senseo Kaffeemaschine. Natürlich bieten wir Ihnen Bettwäsche, Handtücher und Fön. Unseren Gästen steht ein großer Grill zur Verfügung. Auch Ihr Auto findet bei uns seinen Platz.",
+    "period": "Zeitraum",
+    "date": "Datum",
+    "price": "Preis",
+    "noSeason": "Außerhalb der Saison",
+    "lowSeason": "Nebensaison",
+    "highSeason": "Hochsaison"
   },
   "reservation": {
     "subtitle": "BUCHEN",
