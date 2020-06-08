@@ -147,7 +147,7 @@ const App = () => {
             .required(t("form.apartmentReq")),
           comment: Yup.string(),
         })}
-        handleSubmit={(payload, { setSubmitting }) => {
+        handleSubmit2={(payload, { setSubmitting }) => {
           fetch("/?no-cache=1", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -189,7 +189,7 @@ const App = () => {
               setFieldTouched={setFieldTouched}
             >
               <form
-                onSubmit={() => handleSubmit}
+                onSubmit={() => handleSubmit2}
                 name="booking"
                 data-netlify="true"
                 data-netlify-honeypot="bot-field"
