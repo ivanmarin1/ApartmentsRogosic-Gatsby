@@ -16,7 +16,7 @@ const defaultProps = {
 
 export class MapContainer extends Component {
   state = {
-    showingInfoWindow: false, //Hides or the shows the infoWindow
+    showingInfoWindow: true, //Hides or the shows the infoWindow
     activeMarker: {}, //Shows the active marker upon click
     selectedPlace: {}, //Shows the infoWindow to the selected place upon a marker
   }
@@ -60,7 +60,7 @@ export class MapContainer extends Component {
     return (
       <Map
         google={this.props.google}
-        zoom={14}
+        zoom={defaultProps.zoom}
         style={mapStyles}
         initialCenter={{
           lat: defaultProps.center.lat,

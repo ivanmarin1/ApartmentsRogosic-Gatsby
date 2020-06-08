@@ -153,13 +153,20 @@ const App = () => {
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
             body: encode({ "form-name": "booking", payload }),
           })
-          alert(payload.email)
-          setSubmitting(false)
+            .then(() => {
+              alert("Success")
+            })
+            .catch(() => {
+              alert("Error")
+            })
+            .finally(() => setSubmitting(false))
+          // alert(payload.email)
+          // setSubmitting(false)
         }}
         mapPropsToValues={({ user }) => ({
           ...user,
         })}
-        displayName="MyForm"
+        displayName="myForm"
       >
         {props => {
           const {
@@ -170,6 +177,7 @@ const App = () => {
             handleChange,
             handleBlur,
             handleSubmit,
+            handleSubmit2,
             handleReset,
             isSubmitting,
             setFieldTouched,
@@ -181,13 +189,13 @@ const App = () => {
               setFieldTouched={setFieldTouched}
             >
               <form
-                onSubmit={() => handleSubmit}
+                onSubmit={() => handleSubmit2}
                 name="booking"
                 data-netlify="true"
                 data-netlify-honeypot="bot-field"
               >
                 <input type="hidden" name="form-name" value="booking" />
-                <input name="bot-field" type="hidden" />
+                {/* <input name="bot-field" type="hidden" /> */}
                 <TextInput
                   id="firstName"
                   type="text"
