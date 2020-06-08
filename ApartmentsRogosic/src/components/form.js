@@ -149,19 +149,20 @@ const App = () => {
         })}
         handleSubmit={(payload, { setSubmitting }) => {
           console.log("errors:" + errors)
-          if (errors == null)
-            fetch("/?no-cache=1", {
-              method: "POST",
-              headers: { "Content-Type": "application/x-www-form-urlencoded" },
-              body: encode({ "form-name": "booking", payload }),
-            })
-              .then(() => {
-                alert("Success")
-              })
-              .catch(() => {
-                alert("Error")
-              })
-              .finally(() => setSubmitting(false))
+          if (errors === null) console.log("errors in if:" + errors)
+
+          // fetch("/?no-cache=1", {
+          //   method: "POST",
+          //   headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          //   body: encode({ "form-name": "booking", payload }),
+          // })
+          //   .then(() => {
+          //     alert("Success")
+          //   })
+          //   .catch(() => {
+          //     alert("Error")
+          //   })
+          //   .finally(() => setSubmitting(false))
           // alert(payload.email)
           // setSubmitting(false)
         }}
