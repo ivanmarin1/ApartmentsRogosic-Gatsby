@@ -63,6 +63,21 @@ export default function Template({ data }) {
               className={style.description}
               dangerouslySetInnerHTML={{ __html: edge.node.html }}
             ></div>
+            <div
+              style={{
+                maxWidth: "700px",
+                backgroundColor: "rgb(236, 243, 251)",
+                padding: "15px",
+                margin: "60px auto",
+              }}
+            >
+              <h3 style={{ color: "#8b8ed0", textAlign: "left" }}>
+                {t("apartments.equipment")}
+              </h3>
+              <p style={{ fontSize: "15px" }}>
+                {t("apartments.equipment-text")}
+              </p>
+            </div>
             <Price price={currentPrice} />
             <Link to="/reservation/">
               <button className={style.button}>
