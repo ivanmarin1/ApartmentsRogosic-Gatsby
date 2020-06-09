@@ -147,7 +147,7 @@ const App = () => {
             .required(t("form.apartmentReq")),
           comment: Yup.string(),
         })}
-        onSubmit={(values, { setSubmitting }, errors) => {
+        onSubmit={(values, { setSubmitting }) => {
           fetch("/?no-cache=1", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -160,7 +160,6 @@ const App = () => {
               alert("Error")
             })
             .finally(() => setSubmitting(false))
-          alert("nakon fetcha")
           setSubmitting(false)
         }}
         mapPropsToValues={({ user }) => ({
