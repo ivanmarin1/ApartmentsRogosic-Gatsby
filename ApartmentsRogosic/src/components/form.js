@@ -189,7 +189,7 @@ const App = () => {
               setFieldTouched={setFieldTouched}
             >
               <form
-                onSubmit={() => handleSubmit()}
+                onSubmit={handleSubmit}
                 name="booking"
                 data-netlify="true"
                 data-netlify-honeypot="bot-field"
