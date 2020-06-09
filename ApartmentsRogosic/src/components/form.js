@@ -147,11 +147,11 @@ const App = () => {
             .required(t("form.apartmentReq")),
           comment: Yup.string(),
         })}
-        onSubmit={(payload, { setSubmitting }, errors) => {
+        onSubmit={(values, { setSubmitting }, errors) => {
           fetch("/?no-cache=1", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body: encode({ "form-name": "booking", payload }),
+            body: encode({ "form-name": "booking", ...values }),
           })
             .then(() => {
               alert("Success")
@@ -160,7 +160,7 @@ const App = () => {
               alert("Error")
             })
             .finally(() => setSubmitting(false))
-          alert(payload.email)
+          alert("nakon fetcha")
           setSubmitting(false)
         }}
         mapPropsToValues={({ user }) => ({
