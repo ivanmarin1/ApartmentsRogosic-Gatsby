@@ -147,7 +147,7 @@ const App = () => {
             .required(t("form.apartmentReq")),
           comment: Yup.string(),
         })}
-        handleSubmit={(payload, { setSubmitting }, errors) => {
+        onSubmit={(payload, { setSubmitting }, errors) => {
           fetch("/?no-cache=1", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
