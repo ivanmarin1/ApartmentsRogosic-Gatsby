@@ -176,7 +176,6 @@ const App = () => {
             handleChange,
             handleBlur,
             handleSubmit,
-            handleSubmit2,
             handleReset,
             isSubmitting,
             setFieldTouched,

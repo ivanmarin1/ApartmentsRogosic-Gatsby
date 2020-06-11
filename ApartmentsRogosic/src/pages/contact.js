@@ -6,7 +6,6 @@ import Image from "../components/image"
 import styles from "../styles/layout.module.css"
 import { useTranslation } from "react-i18next"
 import SocialButton from "../components/socialButton"
-import MapV2 from "../components/mapsV2"
 
 const socialMedia = [
   {
@@ -88,9 +87,6 @@ const ContactPage = () => {
         </SplitScreen>
         <div id={styles.map} style={{ marginBottom: "20px" }}>
           <h2>{t("contact.mapTitle")}</h2>
-          {/* <div>
-            <MapV2 />
-          </div> */}
           <div>
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11612.45060631235!2d16.423022536359188!3d43.31190116614966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13357b8508a1fd47%3A0xc7b79af7f306a2d6!2sApartmani%20Rogosic%20Osibova!5e0!3m2!1shr!2shr!4v1591619452771!5m2!1shr!2shr"
@@ -101,6 +97,7 @@ const ContactPage = () => {
               allowfullscreen="true"
               aria-hidden="false"
               tabindex="0"
+              title="Google Maps"
             ></iframe>
           </div>
         </div>
