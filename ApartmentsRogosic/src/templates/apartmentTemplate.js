@@ -4,6 +4,7 @@ import SlideSync from "../components/slideSync"
 import style from "../styles/apartments.module.css"
 import { useTranslation } from "react-i18next"
 import Price from "../components/apartmentPrice"
+import Features from "../components/apartmentFeatures"
 import layoutStyle from "../styles/layout.module.css"
 import SEO from "../components/seo"
 
@@ -12,6 +13,24 @@ const A2 = ["45.00 €", "55.00 €", "75.00 €", "55.00 €", "35.00 €"]
 const A3 = ["45.00 €", "65.00 €", "85.00 €", "65.00 €", "45.00 €"]
 const A4 = ["45.00 €", "65.00 €", "85.00 €", "65.00 €", "45.00 €"]
 const A5 = ["85.00 €", "105.00 €", "125.00 €", "105.00 €", "85.00 €"]
+
+const features = [
+  "Terasa",
+  "Grijanje",
+  "Pogled na more",
+  "Hladnjak",
+  "Internet dostupan",
+  "Mikrovalna pećnica",
+  "Korištenje roštilja",
+  "Kuhinjska pećnica",
+  "Parking",
+  "Aparat za kavu",
+  "Satelitska televizija",
+  "Posuđe i pribor za jelo",
+  "Klimatizirano",
+  "Sušilo za kosu",
+  "Vez za čamac",
+]
 
 export default function Template({ data }) {
   const { t, i18n } = useTranslation()
@@ -63,6 +82,7 @@ export default function Template({ data }) {
               className={style.description}
               dangerouslySetInnerHTML={{ __html: edge.node.html }}
             ></div>
+            <Features features={features} />
             <div
               style={{
                 maxWidth: "700px",
