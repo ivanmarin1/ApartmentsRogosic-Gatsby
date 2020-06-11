@@ -7,15 +7,16 @@ const Features = ({ features }) => {
   const { t } = useTranslation()
   return (
     <div className={style.featureList}>
-      <h3 style={{ color: "#8b8ed0", textAlign: "left" }}>Sadržaji i oprema</h3>
-      <ul id={style.features}>
+      <h3 style={{ color: "#8b8ed0", textAlign: "left" }}>
+        {t("apartments." + "equipment")}
+      </h3>
+      <ul id={style.featureStyle}>
         {features.map((element, index) => {
           return (
             <li
               key={index}
               style={{
                 textAlign: "left",
-                marginLeft: "60px",
               }}
             >
               <p
@@ -25,12 +26,22 @@ const Features = ({ features }) => {
                   display: "inline-block",
                 }}
               >
-                {element}
+                {t("apartments.features." + element)}
               </p>
             </li>
           )
         })}
       </ul>
+      <div
+        style={{
+          maxWidth: "700px",
+          backgroundColor: "rgb(236, 243, 251)",
+          padding: "15px",
+          margin: "60px auto",
+        }}
+      >
+        <p style={{ fontSize: "15px" }}>{t("apartments.equipment-text")}</p>
+      </div>
     </div>
   )
 }

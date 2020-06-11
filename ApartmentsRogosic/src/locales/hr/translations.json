@@ -37,7 +37,25 @@
     "highSeason": "Visoka sezona",
     "period": "Razdoblje",
     "date": "Datum",
-    "price": "Cijena"
+    "price": "Cijena",
+    "features": {
+      "balcony": "Balkon",
+      "terrace": "Terasa",
+      "heating": "Grijanje",
+      "seaview": "Pogled na more",
+      "fridge": "Hladnjak",
+      "internet": "Internet",
+      "microwave": "Mikrovalna pećnica",
+      "oven": "Kuhinjska pećnica",
+      "grill": "Roštilj",
+      "parking": "Parking mjesto",
+      "coffeeMachine": "Aparat za kavu",
+      "satellite": "Satelitska televizija",
+      "eatingCutlery": "Posuđe i pribor za jelo",
+      "ac": "Klima",
+      "hairdryer": "Sušilo za kosu",
+      "boatMooring": "Vez za čamac"
+    }
   },
   "reservation": {
     "subtitle": "REZERVACIJE",

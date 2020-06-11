@@ -33,9 +33,14 @@
   max-width: 600px;
 }
 
-#features {
+.featureList h3 {
+  margin-left: 50px;
+}
+
+#featureStyle {
   list-style: none;
   margin-top: 20px;
+  margin-left: 90px;
   -moz-column-count: 2;
   -moz-column-gap: 20px;
   -webkit-column-count: 2;
@@ -44,7 +49,7 @@
   column-gap: 20px;
 }
 
-#features li:before {
+#featureStyle li:before {
   content: "✓";
   color: green;
   font-weight: bold; /* If you want it to be bold */
@@ -54,7 +59,7 @@
 }
 
 @media screen and (max-width: 600px) {
-  #features {
+  #featureStyle {
     -moz-column-count: 2;
     -moz-column-gap: 20px;
     -webkit-column-count: 2;

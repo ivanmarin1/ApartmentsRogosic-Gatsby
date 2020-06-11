@@ -37,7 +37,25 @@
     "highSeason": "High season",
     "period": "Season period",
     "date": "Date",
-    "price": "Price"
+    "price": "Price",
+    "features": {
+      "balcony": "Balcony",
+      "terrace": "Terrace",
+      "heating": "Heating",
+      "seaview": "Seaview",
+      "fridge": "Refrigerator",
+      "internet": "Internet",
+      "microwave": "Microwave",
+      "oven": "Kitchen oven",
+      "grill": "Barbecue",
+      "parking": "Parking spot",
+      "coffeeMachine": "Coffee machine",
+      "satellite": "Satellite",
+      "eatingCutlery": "Dishes and cutlery",
+      "ac": "Air conditioning",
+      "hairdryer": "Hairdryer",
+      "boatMooring": "Boat mooring spot"
+    }
   },
   "reservation": {
     "subtitle": "BOOKING",

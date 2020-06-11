@@ -25,7 +25,7 @@
     "intro": "Cerca i nostri appartamenti e trova l'alloggio adatto alle tue esigenze. Se trovi l'appartamento che desideri, non esitare a prenotare e ti risponderemo al più presto:)",
     "button": "Appartamenti",
     "bookButton": "BOOK NOW",
-    "apartment1": "Appartament 1",
+    "apartment1": "Appartamenti 1",
     "apartment2": "Appartamenti 2",
     "apartment3": "Appartamenti 3",
     "apartment4": "Appartamenti 4",
@@ -37,7 +37,25 @@
     "highSeason": "Alta stagione",
     "period": "Periodo di stagione",
     "date": "Data",
-    "price": "Prezzo"
+    "price": "Prezzo",
+    "features": {
+      "balcony": "Balcone",
+      "terrace": "Terrazza",
+      "heating": "Sistema di riscaldamento",
+      "seaview": "Vista sul mare",
+      "fridge": "Frigorifero",
+      "internet": "Internet",
+      "microwave": "Microonde",
+      "oven": "Forno da cucina",
+      "grill": "Griglia",
+      "parking": "Parcheggio",
+      "coffeeMachine": "Macchina per il caffè",
+      "satellite": "Satellitare",
+      "eatingCutlery": "Piatti e posate",
+      "ac": "Aria condizionata",
+      "hairdryer": "Asciugacapelli",
+      "boatMooring": "Posto barca"
+    }
   },
   "reservation": {
     "subtitle": "PRENOTAZIONE",
