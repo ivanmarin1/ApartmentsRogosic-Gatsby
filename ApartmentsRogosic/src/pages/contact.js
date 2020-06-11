@@ -96,7 +96,6 @@ const ContactPage = () => {
               style={{ border: "0" }}
               allowfullscreen="true"
               aria-hidden="false"
-              tabindex="0"
               title="Google Maps"
             ></iframe>
           </div>
