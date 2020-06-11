@@ -34,7 +34,28 @@
     "equipment-text": "Besides standard furniture all flats are equipped with kettle, microwave oven and Senseo coffee maker. We provide lining, towels and hairdryer. A big barbecue is made available to our guests. We also have covered parking space for your car.",
     "noSeason": "Outside of season",
     "lowSeason": "Low season",
-    "highSeason": "High season"
+    "highSeason": "High season",
+    "period": "Season period",
+    "date": "Date",
+    "price": "Price",
+    "features": {
+      "balcony": "Balcony",
+      "terrace": "Terrace",
+      "heating": "Heating",
+      "seaview": "Seaview",
+      "fridge": "Refrigerator",
+      "internet": "Internet",
+      "microwave": "Microwave",
+      "oven": "Kitchen oven",
+      "grill": "Barbecue",
+      "parking": "Parking spot",
+      "coffeeMachine": "Coffee machine",
+      "satellite": "Satellite",
+      "eatingCutlery": "Dishes and cutlery",
+      "ac": "Air conditioning",
+      "hairdryer": "Hairdryer",
+      "boatMooring": "Boat mooring spot"
+    }
   },
   "reservation": {
     "subtitle": "BOOKING",

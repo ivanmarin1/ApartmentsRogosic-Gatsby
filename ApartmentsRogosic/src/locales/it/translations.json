@@ -25,7 +25,7 @@
     "intro": "Cerca i nostri appartamenti e trova l'alloggio adatto alle tue esigenze. Se trovi l'appartamento che desideri, non esitare a prenotare e ti risponderemo al più presto:)",
     "button": "Appartamenti",
     "bookButton": "BOOK NOW",
-    "apartment1": "Appartament 1",
+    "apartment1": "Appartamenti 1",
     "apartment2": "Appartamenti 2",
     "apartment3": "Appartamenti 3",
     "apartment4": "Appartamenti 4",
@@ -34,7 +34,28 @@
     "equipment-text": "A parte l'atrezzatura standard -TV satelite, la cucina con i frigoferi, i forno a microonde, l'aria condizionata, scaldabagno e la macchina del caffe Senseo. A disposizione sono anche lenzuola, asciugamani e asciugacapelli. Si nostri ospiti sono interesati c'e anche a barbicue a legni. Il parcheggio e assiccurato. ",
     "noSeason": "Fuori stagione",
     "lowSeason": "Bassa stagione",
-    "highSeason": "Alta stagione"
+    "highSeason": "Alta stagione",
+    "period": "Periodo di stagione",
+    "date": "Data",
+    "price": "Prezzo",
+    "features": {
+      "balcony": "Balcone",
+      "terrace": "Terrazza",
+      "heating": "Sistema di riscaldamento",
+      "seaview": "Vista sul mare",
+      "fridge": "Frigorifero",
+      "internet": "Internet",
+      "microwave": "Microonde",
+      "oven": "Forno da cucina",
+      "grill": "Griglia",
+      "parking": "Parcheggio",
+      "coffeeMachine": "Macchina per il caffè",
+      "satellite": "Satellitare",
+      "eatingCutlery": "Piatti e posate",
+      "ac": "Aria condizionata",
+      "hairdryer": "Asciugacapelli",
+      "boatMooring": "Posto barca"
+    }
   },
   "reservation": {
     "subtitle": "PRENOTAZIONE",

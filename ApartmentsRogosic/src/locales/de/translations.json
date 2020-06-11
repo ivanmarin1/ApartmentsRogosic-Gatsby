@@ -37,7 +37,25 @@
     "price": "Preis",
     "noSeason": "Außerhalb der Saison",
     "lowSeason": "Nebensaison",
-    "highSeason": "Hochsaison"
+    "highSeason": "Hochsaison",
+    "features": {
+      "balcony": "Balkon",
+      "terrace": "Terrasse",
+      "heating": "Heizsystem",
+      "seaview": "Seeblick",
+      "fridge": "Kühlschrank",
+      "internet": "Internet",
+      "microwave": "Mikrowelle",
+      "oven": "Küchenofen",
+      "grill": "Grill",
+      "parking": "Parkplatz",
+      "coffeeMachine": "Kaffeemaschine",
+      "satellite": "Satellit",
+      "eatingCutlery": "Geschirr und Besteck",
+      "ac": "Klimaanlage",
+      "hairdryer": "Fön",
+      "boatMooring": "Bootsanlegestelle"
+    }
   },
   "reservation": {
     "subtitle": "BUCHEN",

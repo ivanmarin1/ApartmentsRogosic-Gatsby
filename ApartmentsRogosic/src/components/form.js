@@ -1,6 +1,6 @@
 import "../styles/formik-demo.css"
 import React from "react"
-import { Formik, validateYupSchema } from "formik"
+import { Formik } from "formik"
 import * as Yup from "yup"
 import classnames from "classnames"
 import { useTranslation } from "react-i18next"
@@ -176,7 +176,6 @@ const App = () => {
             handleChange,
             handleBlur,
             handleSubmit,
-            handleSubmit2,
             handleReset,
             isSubmitting,
             setFieldTouched,
