@@ -34,7 +34,10 @@
     "equipment-text": "Svaki apartman, pored standardne opreme, ima: satelitski program, grijač za vodu, mikrovalnu pećnicu, klima uređaj te Senseo aparat za kavu. Naravno, mi vam nudimo krevetninu, ručnike i sušilo za kosu. Našim gostima stoji na raspolaganju roštilj i natkriveno parkirno mjesto.",
     "noSeason": "Van sezone",
     "lowSeason": "Niska sezona",
-    "highSeason": "Visoka sezona"
+    "highSeason": "Visoka sezona",
+    "period": "Razdoblje",
+    "date": "Datum",
+    "price": "Cijena"
   },
   "reservation": {
     "subtitle": "REZERVACIJE",

@@ -8,9 +8,9 @@ const Price = ({ price }) => {
   return (
     <table id={style.tablePrice}>
       <tr>
-        <th>Razdoblje</th>
-        <th>Datum</th>
-        <th>Cijena</th>
+        <th>{t("apartments.period")}</th>
+        <th>{t("apartments.date")}</th>
+        <th>{t("apartments.price")}</th>
       </tr>
       <tr>
         <td>{t("apartments.noSeason")}</td>

@@ -34,7 +34,10 @@
     "equipment-text": "A parte l'atrezzatura standard -TV satelite, la cucina con i frigoferi, i forno a microonde, l'aria condizionata, scaldabagno e la macchina del caffe Senseo. A disposizione sono anche lenzuola, asciugamani e asciugacapelli. Si nostri ospiti sono interesati c'e anche a barbicue a legni. Il parcheggio e assiccurato. ",
     "noSeason": "Fuori stagione",
     "lowSeason": "Bassa stagione",
-    "highSeason": "Alta stagione"
+    "highSeason": "Alta stagione",
+    "period": "Periodo di stagione",
+    "date": "Data",
+    "price": "Prezzo"
   },
   "reservation": {
     "subtitle": "PRENOTAZIONE",
