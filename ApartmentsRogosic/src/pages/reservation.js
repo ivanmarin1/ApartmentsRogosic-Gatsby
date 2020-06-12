@@ -5,8 +5,9 @@ import Form from "../components/form"
 import styles from "../styles/layout.module.css"
 import { useTranslation } from "react-i18next"
 
-const ReservationPage = () => {
+const ReservationPage = ({ location }) => {
   const { t } = useTranslation()
+  const activeApartment = location.state.apart
   return (
     <>
       <div className={styles.mainContainer}>
@@ -18,7 +19,7 @@ const ReservationPage = () => {
           <div>
             <p>{t("reservation.text")}</p>
           </div>
-          <Form id="root"></Form>
+          <Form id="root" apartment={activeApartment}></Form>
         </div>
       </div>
     </>

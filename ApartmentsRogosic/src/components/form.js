@@ -96,7 +96,7 @@ const TextArea = ({
   )
 }
 
-const App = () => {
+const App = ({ apartment }) => {
   const { t } = useTranslation()
 
   return (
@@ -109,7 +109,7 @@ const App = () => {
           personNum: "",
           date: "",
           date2: "",
-          apartmentNum: "",
+          apartmentNum: apartment,
           comment: "",
         }}
         initialValues={{
@@ -119,7 +119,7 @@ const App = () => {
           personNum: "",
           date: "",
           date2: "",
-          apartmentNum: "",
+          apartmentNum: apartment,
           comment: "",
           "bot-field": "",
           "form-name": "booking",

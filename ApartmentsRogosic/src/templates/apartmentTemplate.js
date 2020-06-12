@@ -42,6 +42,7 @@ export default function Template({ data }) {
         default:
           currentPrice = A1
       }
+      console.log("Apartment before: " + edge.node.frontmatter.apartment[1])
       return (
         <>
           <SEO title={edge.node.frontmatter.title} />
@@ -66,7 +67,10 @@ export default function Template({ data }) {
             ></div>
             <Features features={edge.node.frontmatter.features} />
             <Price price={currentPrice} />
-            <Link to="/reservation/">
+            <Link
+              to="/reservation/"
+              state={{ apart: edge.node.frontmatter.apartment[1] }}
+            >
               <button className={style.button}>
                 {t("apartments.bookButton")}
               </button>
