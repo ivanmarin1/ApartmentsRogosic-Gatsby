@@ -8,7 +8,7 @@ const Features = ({ features }) => {
   return (
     <div className={style.featureDiv}>
       <h3 style={{ color: "#8b8ed0", textAlign: "left" }}>
-        {t("apartments." + "equipment")}
+        {t("apartments.equipment")}
       </h3>
       <div className={style.featureList}>
         <ul id={style.featureStyle}>
