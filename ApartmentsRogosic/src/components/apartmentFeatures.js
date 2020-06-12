@@ -6,32 +6,34 @@ import "../i18n/i18n"
 const Features = ({ features }) => {
   const { t } = useTranslation()
   return (
-    <div className={style.featureList}>
+    <div className={style.featureDiv}>
       <h3 style={{ color: "#8b8ed0", textAlign: "left" }}>
         {t("apartments." + "equipment")}
       </h3>
-      <ul id={style.featureStyle}>
-        {features.map((element, index) => {
-          return (
-            <li
-              key={index}
-              style={{
-                textAlign: "left",
-              }}
-            >
-              <p
+      <div className={style.featureList}>
+        <ul id={style.featureStyle}>
+          {features.map((element, index) => {
+            return (
+              <li
+                key={index}
                 style={{
-                  fontSize: "15px",
-                  margin: "0",
-                  display: "inline-block",
+                  textAlign: "left",
                 }}
               >
-                {t("apartments.features." + element)}
-              </p>
-            </li>
-          )
-        })}
-      </ul>
+                <p
+                  style={{
+                    fontSize: "15px",
+                    margin: "0",
+                    display: "inline-block",
+                  }}
+                >
+                  {t("apartments.features." + element)}
+                </p>
+              </li>
+            )
+          })}
+        </ul>
+      </div>
       <div
         style={{
           maxWidth: "700px",
