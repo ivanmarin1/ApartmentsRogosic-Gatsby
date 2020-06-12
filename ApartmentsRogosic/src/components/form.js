@@ -140,7 +140,7 @@ const App = ({ apartment }) => {
             .max(20, t("form.personNumMax"))
             .required(t("form.personNumReq")),
           date: Yup.date()
-            .min("2020-06-01", t("form.startDateLow"))
+            .min(new Date(), t("form.startDateLow"))
             .required(t("form.dateReq")),
           date2: Yup.date()
             .required(t("form.dateReq"))
