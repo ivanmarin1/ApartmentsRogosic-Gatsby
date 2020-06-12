@@ -8,12 +8,9 @@ import { useTranslation } from "react-i18next"
 const ReservationPage = ({ location }) => {
   const { t } = useTranslation()
   let activeApartment = 0
-  console.log("state: " + location.state)
   if (location.state) {
     activeApartment = location.state.apart
   }
-  console.log("apartment: " + activeApartment)
-
   return (
     <>
       <div className={styles.mainContainer}>
