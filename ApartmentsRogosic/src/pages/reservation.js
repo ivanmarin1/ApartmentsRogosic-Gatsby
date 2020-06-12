@@ -7,11 +7,13 @@ import { useTranslation } from "react-i18next"
 
 const ReservationPage = ({ location }) => {
   const { t } = useTranslation()
-  if (location.state.apart !== undefined) {
-    const activeApartment = location.state.apart
-  } else {
-    const activeApartment = 0
+  let activeApartment = 0
+  console.log("state: " + location.state)
+  if (location.state.apart) {
+    activeApartment = location.state.apart
   }
+  console.log("apartment: " + activeApartment)
+
   return (
     <>
       <div className={styles.mainContainer}>
