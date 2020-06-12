@@ -80,6 +80,8 @@
     "personNumMax": "We have nowhere to put so many people :)",
     "personNumReq": "Number of persons required.",
     "dateReq": "Date is required.",
+    "endDateLess": "Departure date must be greater than arrival date.",
+    "startDateLow": "Arrival date can't be in the past :)",
     "apartmentMin": "We do not own a zero apartment :)",
     "apartmentMax": "We don't have that many apartments :)",
     "apartmentReq": "You must take at least one apartment :)",

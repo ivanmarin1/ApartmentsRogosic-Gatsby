@@ -79,6 +79,8 @@
     "personNumMax": "Nemamo gdje smjestiti toliko osoba :)",
     "personNumReq": "Broj osoba je obavezan.",
     "dateReq": "Datum je obavezan.",
+    "endDateLess": "Datum odlaska mora biti veći od datuma dolaska.",
+    "startDateLow": "Datum dolaska ne može biti u prošlosti :)",
     "apartmentMin": "Ne posjedujemo nulti apartman :)",
     "apartmentMax": "Nemamo baš toliko apartmana :)",
     "apartmentReq": "Morate uzeti barem jedan apartman :)",

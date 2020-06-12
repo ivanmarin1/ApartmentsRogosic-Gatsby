@@ -80,6 +80,8 @@
     "personNumMax": "Personenanzahl maximum ist 20.",
     "personNumReq": "Personenanzahl ist Pflicht.",
     "dateReq": "Datum ist Pflicht.",
+    "endDateLess": "Das Abreisedatum muss größer sein als das Anreisedatum.",
+    "startDateLow": "Das Ankunftsdatum kann nicht in der Vergangenheit liegen :)",
     "apartmentMin": "Wir besitzen keine Null-Wohnung :)",
     "apartmentMax": "Wir haben nicht so viele Wohnungen :)",
     "apartmentReq": "Sie müssen mindestens eine Wohnung nehmen :)",
