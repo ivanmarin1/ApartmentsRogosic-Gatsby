@@ -1,5 +1,12 @@
 .link {
   text-decoration: none;
+  transition: transform 0.2s; /* Animation */
+  display: inline-block;
+}
+
+.link:hover {
+  /* text-decoration: underline; */
+  transform: scale(1.05);
 }
 
 .wrapper {
@@ -28,10 +35,6 @@
 
 .description {
   margin: 0 0 0 10px;
-}
-
-.link:hover {
-  text-decoration: underline;
 }
 
 .wrapper p {
