@@ -12,7 +12,7 @@
 .wrapper {
   text-decoration: none;
   padding: 25px 10px 30px 10px;
-  border-bottom: 1px solid rgb(180, 180, 180);
+  border-bottom: 1px solid var(--border-color);
 }
 
 .grid {
@@ -21,7 +21,7 @@
 }
 
 .auth > h3 {
-  color: #4a4ebb;
+  color: var(--main-dark-color);
   font-size: 18px;
   margin-bottom: 10px;
 }

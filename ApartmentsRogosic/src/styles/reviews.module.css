@@ -5,11 +5,11 @@
 .wrapper {
   text-decoration: none;
   margin: 25px 5px;
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid var(--border-color);
 }
 
 .auth > h3 {
-  color: #4a4ebb;
+  color: var(--main-dark-color);
   font-size: 18px;
 }
 

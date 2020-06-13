@@ -28,7 +28,7 @@ a {
 
 .text {
   text-decoration: none;
-  color: white;
+  color: var(--headline-color);
   font-size: 16px;
   font-weight: bold;
   vertical-align: middle;

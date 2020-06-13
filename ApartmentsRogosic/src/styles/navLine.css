@@ -2,7 +2,7 @@ hr {
   height: 0.25rem;
   width: 20%;
   margin: 0;
-  background: #ffc59b;
+  background: var(--contrast-color);
   border: none;
   transition: 0.3s ease-in-out;
   visibility: hidden;

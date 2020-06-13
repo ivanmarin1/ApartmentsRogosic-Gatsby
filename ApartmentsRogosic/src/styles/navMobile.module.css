@@ -5,14 +5,14 @@
   height: 55px;
   text-align: center;
   padding: 0;
-  color: white;
+  color: var(--headline-color);
   text-decoration: none;
   font: 10px Play, sans-serif;
   font-style: normal;
   font-weight: bold;
 }
 .navBar {
-  background-color: #8b8ed0;
+  background-color: var(--main-light-color);
   display: none;
   overflow: hidden;
   position: fixed;

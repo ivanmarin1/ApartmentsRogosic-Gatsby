@@ -2,11 +2,22 @@ body {
   margin: 0 auto;
   width: 100%;
   font-family: "Muli, sans-serif";
-  color: #494949;
+  --main-dark-color: #4a4ebb;
+  --main-light-color: #8b8ed0;
+  --contrast-color: #ffc59b;
+  --text-color: #494949;
+  --headline-color: white;
+  --sideHeadline-color: #d8d8d8;
+  --border-color: rgb(180, 180, 180);
+  --table-nth-color: #f2f2f2;
+  --table-border: #ddd;
+  --footer-background: rgb(63, 63, 63);
+  --footer-text: black;
+  color: var(--text-color);
 }
 
 p {
-  color: #494949;
+  color: var(--text-color);
   font: 17px play, sans-serif;
   line-height: 1.6;
   text-align: justify;
@@ -56,14 +67,14 @@ h1 {
 }
 h2 {
   letter-spacing: 1px;
-  color: black;
+  color: var(--text-color);
   margin: "2%";
   text-align: left;
   font-family: Muli, sans-serif;
 }
 h3 {
   letter-spacing: 1px;
-  color: white;
+  color: var(--headline-color);
   margin: 0;
   text-align: left;
   font-family: Muli, sans-serif;
