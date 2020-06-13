@@ -42,7 +42,7 @@ export default function Template({ data }) {
         default:
           currentPrice = A1
       }
-      console.log("Apartment before: " + edge.node.frontmatter.apartment[1])
+      // console.log("Apartment before: " + edge.node.frontmatter.apartment[1])
       return (
         <>
           <SEO title={edge.node.frontmatter.title} />
