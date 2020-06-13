@@ -65,6 +65,7 @@ p {
 h1 {
   letter-spacing: 2px;
 }
+
 h2 {
   letter-spacing: 1px;
   color: var(--text-color);
@@ -72,15 +73,11 @@ h2 {
   text-align: left;
   font-family: Muli, sans-serif;
 }
+
 h3 {
   letter-spacing: 1px;
   color: var(--headline-color);
   margin: 0;
   text-align: left;
   font-family: Muli, sans-serif;
-}
-
-#map > div {
-  position: relative !important;
-  height: 300px !important;
 }
