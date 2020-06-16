@@ -276,6 +276,9 @@ const App = ({ apartment }) => {
                   value={values.personNum}
                   onChange={handleChange}
                   onBlur={handleBlur}
+                  onWheel={event => {
+                    event.preventDefault()
+                  }}
                 />
                 <TextInput
                   id="date"
