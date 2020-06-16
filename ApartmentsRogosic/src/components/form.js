@@ -96,6 +96,41 @@ const TextArea = ({
     </div>
   )
 }
+const Select = ({
+  type,
+  id,
+  label,
+  error,
+  value,
+  onChange,
+  className,
+  ...props
+}) => {
+  const classes = classnames(
+    "input-group",
+    {
+      "animated shake error": !!error,
+    },
+    className
+  )
+  return (
+    <div className={classes}>
+      <Label htmlFor={id} error={error}>
+        {label}
+      </Label>
+      <select
+        id={id}
+        name={id}
+        className="text-input mySelect"
+        type={type}
+        value={value}
+        onChange={onChange}
+        {...props}
+      />
+      <InputFeedback error={error} />
+    </div>
+  )
+}
 
 const App = ({ apartment }) => {
   const { t } = useTranslation()
@@ -159,7 +194,10 @@ const App = ({ apartment }) => {
             body: encode({ "form-name": "booking", ...values }),
           })
             .then(() => {
-              return <PopUp />
+              console.log("in then")
+              alert("Good job")
+              // <PopUp />
+              console.log("After popup")
             })
             .catch(() => {
               alert("Error")
@@ -259,7 +297,7 @@ const App = ({ apartment }) => {
                   onChange={handleChange}
                   onBlur={handleBlur}
                 />
-                <TextInput
+                {/* <TextInput
                   id="apartmentNum"
                   type="number"
                   label={t("form.apartmentNum")}
@@ -268,8 +306,46 @@ const App = ({ apartment }) => {
                   value={values.apartmentNum}
                   onChange={handleChange}
                   onBlur={handleBlur}
-                />
-
+                /> */}
+                <Select
+                  id="apartmentNum"
+                  name={t("form.apartmentNum")}
+                  value={values.color}
+                  label={t("form.apartmentNum")}
+                  error={touched.apartmentNum && errors.apartmentNum}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  style={{ display: "block" }}
+                  placeholder={t("form.apartmentNumPlaceholder")}
+                >
+                  <option
+                    value=""
+                    hidden
+                    selected
+                    disabled
+                    label="Please choose"
+                  />
+                  <option
+                    value={t("apartments.apartment1")}
+                    label={t("apartments.apartment1")}
+                  />
+                  <option
+                    value={t("apartments.apartment2")}
+                    label={t("apartments.apartment2")}
+                  />
+                  <option
+                    value={t("apartments.apartment3")}
+                    label={t("apartments.apartment3")}
+                  />
+                  <option
+                    value={t("apartments.apartment4")}
+                    label={t("apartments.apartment4")}
+                  />
+                  <option
+                    value={t("apartments.apartment5")}
+                    label={t("apartments.apartment5")}
+                  />
+                </Select>
                 <TextArea
                   id="comment"
                   type="text"
