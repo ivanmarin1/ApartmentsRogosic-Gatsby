@@ -124,7 +124,7 @@ const Select = ({
         className="text-input mySelect"
         type={type}
         value={value}
-        onChange={onChange}
+        onBlur={onChange}
         {...props}
       />
       <InputFeedback error={error} />
