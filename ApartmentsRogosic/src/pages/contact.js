@@ -12,7 +12,7 @@ const socialMedia = [
     color: "#01e675",
     text: "Whatsapp",
     icon: "whatsapp.png",
-    link: "https://api.whatsapp.com/send?phone=385991980646",
+    link: "https://api.whatsapp.com/send?phone=491771402860",
   },
   {
     color: "#365899",
