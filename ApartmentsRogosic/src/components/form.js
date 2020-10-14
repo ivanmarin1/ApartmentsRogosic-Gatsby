@@ -5,7 +5,6 @@ import * as Yup from "yup"
 import classnames from "classnames"
 import { useTranslation } from "react-i18next"
 import WithTranslateFormErrors from "../i18n/useTranslateFormErrors"
-import PopUp from "./popUp"
 
 const InputFeedback = ({ error }) =>
   error ? <div className="input-feedback">{error}</div> : null

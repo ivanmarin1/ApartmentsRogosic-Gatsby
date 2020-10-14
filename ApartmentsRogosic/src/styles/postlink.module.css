@@ -41,3 +41,19 @@
   margin: 0;
   font-size: 15px;
 }
+
+@media only screen and (max-width: 1000px) {
+  .grid {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .image {
+    margin: 10px auto;
+  }
+}
