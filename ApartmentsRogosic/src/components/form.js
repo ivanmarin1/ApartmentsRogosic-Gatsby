@@ -142,6 +142,7 @@ const App = ({ apartment }) => {
           firstName: "",
           lastName: "",
           personNum: "",
+          childrenNum: "",
           date: "",
           date2: "",
           apartmentNum: apartment,
@@ -152,6 +153,7 @@ const App = ({ apartment }) => {
           firstName: "",
           lastName: "",
           personNum: "",
+          childrenNum: "",
           date: "",
           date2: "",
           apartmentNum: apartment,
@@ -174,16 +176,16 @@ const App = ({ apartment }) => {
             .min(1, t("form.personNumMin"))
             .max(20, t("form.personNumMax"))
             .required(t("form.personNumReq")),
+          childrenNum: Yup.number()
+            .min(0, t("form.personNumMin"))
+            .max(20, t("form.childrenNumMax")),
           date: Yup.date()
             .min(new Date(), t("form.startDateLow"))
             .required(t("form.dateReq")),
           date2: Yup.date()
             .required(t("form.dateReq"))
             .min(Yup.ref("date"), t("form.endDateLess")),
-          apartmentNum: Yup.number()
-            .min(1, t("form.apartmentMin"))
-            .max(6, t("form.apartmentMax"))
-            .required(t("form.apartmentReq")),
+          apartmentNum: Yup.number().required(t("form.apartmentReq")),
           comment: Yup.string(),
         })}
         onSubmit={(values, { setSubmitting }) => {
@@ -280,6 +282,19 @@ const App = ({ apartment }) => {
                   }}
                 />
                 <TextInput
+                  id="childrenNum"
+                  type="number"
+                  label={t("form.childrenNum")}
+                  placeholder={t("form.childrenNumPlaceholder")}
+                  error={touched.childrenNum && errors.childrenNum}
+                  value={values.childrenNum}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  onWheel={event => {
+                    event.preventDefault()
+                  }}
+                />
+                <TextInput
                   id="date"
                   type="date"
                   label={t("form.dateArrival")}
@@ -314,7 +329,6 @@ const App = ({ apartment }) => {
                   name={t("form.apartmentNum")}
                   value={values.color}
                   label={t("form.apartmentNum")}
-                  error={touched.apartmentNum && errors.apartmentNum}
                   onChange={handleChange}
                   onBlur={handleBlur}
                   style={{ display: "block" }}
