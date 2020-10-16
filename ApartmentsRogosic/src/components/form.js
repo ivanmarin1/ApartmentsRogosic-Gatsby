@@ -145,7 +145,7 @@ const App = ({ apartment }) => {
           childrenNum: "",
           date: "",
           date2: "",
-          apartmentNum: apartment,
+          apartmentNum: "",
           comment: "",
         }}
         initialValues={{
@@ -156,7 +156,7 @@ const App = ({ apartment }) => {
           childrenNum: "",
           date: "",
           date2: "",
-          apartmentNum: apartment,
+          apartmentNum: "",
           comment: "",
           "bot-field": "",
           "form-name": "booking",
