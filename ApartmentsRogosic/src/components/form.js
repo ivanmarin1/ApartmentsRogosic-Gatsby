@@ -235,6 +235,7 @@ const App = ({ apartment }) => {
                 name="booking"
                 data-netlify="true"
                 data-netlify-honeypot="bot-field"
+                action="/pages/formSuccess"
               >
                 <input type="hidden" name="form-name" value="booking" />
                 {/* <input name="bot-field" type="hidden" /> */}
