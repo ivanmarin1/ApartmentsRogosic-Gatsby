@@ -185,7 +185,7 @@ const App = ({ apartment }) => {
           date2: Yup.date()
             .required(t("form.dateReq"))
             .min(Yup.ref("date"), t("form.endDateLess")),
-          apartmentNum: Yup.number().required(t("form.apartmentReq")),
+          apartmentNum: Yup.string().required(t("form.apartmentReq")),
           comment: Yup.string(),
         })}
         onSubmit={(values, { setSubmitting }) => {
@@ -328,7 +328,7 @@ const App = ({ apartment }) => {
                 <Select
                   id="apartmentNum"
                   name={t("form.apartmentNum")}
-                  value={values.color}
+                  value={values.apartmentNum}
                   label={t("form.apartmentNum")}
                   onChange={handleChange}
                   onBlur={handleBlur}
