@@ -8,6 +8,13 @@ a {
   border: 1px solid;
   margin: 5px;
   border-radius: 2px;
+  transition: transform 0.2s;
+  background-color: white;
+}
+
+.button:hover {
+  z-index: 3;
+  transform: scale(1.2);
 }
 
 .icon {
