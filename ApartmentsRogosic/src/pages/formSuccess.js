@@ -1,5 +1,7 @@
 import React from "react"
 import Modal from "react-modal"
+import { useTranslation } from "react-i18next"
+import WithTranslateFormErrors from "../i18n/useTranslateFormErrors"
 
 const customStyles = {
   content: {
@@ -42,6 +44,7 @@ export default class formSuccess extends React.Component {
   }
 
   render() {
+    const { t } = useTranslation()
     return (
       <div>
         <button onClick={this.openModal}>Open Modal</button>
@@ -54,12 +57,11 @@ export default class formSuccess extends React.Component {
         >
           <div style={{ backgroundColor: "#4a4ebb" }}>
             <h2 ref={subtitle => (this.subtitle = subtitle)}>
-              &#10004; Success
+              &#10004; {t("form.successHeadline")}
             </h2>
           </div>
           <div style={{ padding: "10px" }}>
-            <p>Thank you for your reservation!</p>
-            <p>We will get back to you as soon as possible.</p>
+            <p>{t("form.successMessage")}</p>
             <div
               style={{
                 height: "70px",
@@ -75,7 +77,9 @@ export default class formSuccess extends React.Component {
                   transform: "translate(-50%, -50%)",
                 }}
               >
-                <button onClick={this.closeModal}>close</button>
+                <button onClick={this.closeModal}>
+                  {t("form.successButton")}
+                </button>
               </div>
             </div>
           </div>

@@ -109,6 +109,9 @@
     "commentPlaceholder": "Se hai altre domande, sentiti libero di chiedere :)",
     "resetConfirm": "Sei sicuro di voler ripristinare la voce?",
     "resetButton": "Reset",
-    "sendButton": "Invia"
+    "sendButton": "Invia",
+    "successHeadline": "Successo",
+    "successMessage": "Grazie per la tua prenotazione! \n\nTi ricontatteremo il prima possibile.",
+    "successButton": "Vicino"
   }
 }

@@ -109,6 +109,9 @@
     "commentPlaceholder": "Wenn Sie weitere Fragen haben, können Sie diese gerne stellen :)",
     "resetConfirm": "Sind Sie sicher, dass Sie den Eintrag zurücksetzen möchten?",
     "resetButton": "Löschen",
-    "sendButton": "Senden"
+    "sendButton": "Senden",
+    "successHeadline": "Erfolg",
+    "successMessage": "Vielen Dank für Ihre Reservierung! \n\nWir werden uns so schnell wie möglich bei Ihnen melden.",
+    "successButton": "Schließen"
   }
 }

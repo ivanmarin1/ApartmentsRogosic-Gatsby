@@ -109,6 +109,9 @@
     "commentPlaceholder": "If you have some more questions, feel free to ask :)",
     "resetConfirm": "Are you sure you want to reset the entry?",
     "resetButton": "Reset",
-    "sendButton": "Submit"
+    "sendButton": "Submit",
+    "successHeadline": "Success",
+    "successMessage": "Thank you for your reservation! \n\nWe will get back to you as soon as possible.",
+    "successButton": "Close"
   }
 }

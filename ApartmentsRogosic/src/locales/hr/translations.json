@@ -108,6 +108,9 @@
     "commentPlaceholder": "Ukoliko imate još pitanja, slobodno pitajte :)",
     "resetConfirm": "Jeste li sigurni da želite poništiti unos?",
     "resetButton": "Poništi",
-    "sendButton": "Pošalji"
+    "sendButton": "Pošalji",
+    "successHeadline": "Uspješno",
+    "successMessage": "Hvala vam na vašoj rezervaciji! \n\nJaviti ćemo vam se u što kraćem roku.",
+    "successButton": "Zatvori"
   }
 }
