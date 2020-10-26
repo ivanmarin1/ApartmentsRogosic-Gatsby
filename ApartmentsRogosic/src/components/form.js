@@ -379,7 +379,10 @@ const App = ({ apartment }) => {
                     label={t("apartments.apartment4")}
                     aria-label={t("apartments.apartment4")}
                     onClick={() =>
-                      setFieldValue("apartmentNum", t("apartments.apartment4"))
+                      setFieldValue(
+                        t("form.apartmentNum"),
+                        t("apartments.apartment4")
+                      )
                     }
                   />
                   <option
