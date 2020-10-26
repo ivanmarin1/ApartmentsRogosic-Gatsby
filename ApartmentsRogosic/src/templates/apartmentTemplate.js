@@ -71,7 +71,7 @@ export default function Template({ data }) {
               to="/reservation/"
               state={{ apart: edge.node.frontmatter.apartment[1] }}
             >
-              <button className={style.button}>
+              <button className={style.contrastButton}>
                 {t("apartments.bookButton")}
               </button>
             </Link>
