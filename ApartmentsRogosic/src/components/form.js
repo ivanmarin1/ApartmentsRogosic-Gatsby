@@ -348,7 +348,7 @@ const App = ({ apartment }) => {
                     value={t("apartments.apartment1")}
                     label={t("apartments.apartment1")}
                     aria-label={t("apartments.apartment1")}
-                    onClick={() =>
+                    onclick={() =>
                       setFieldValue(
                         values.apartmentNum,
                         t("apartments.apartment1")
@@ -359,7 +359,7 @@ const App = ({ apartment }) => {
                     value={t("apartments.apartment2")}
                     label={t("apartments.apartment2")}
                     aria-label={t("apartments.apartment2")}
-                    onClick={() =>
+                    onclick={() =>
                       setFieldValue(
                         t("form.apartmentNum"),
                         t("apartments.apartment2")
@@ -370,7 +370,7 @@ const App = ({ apartment }) => {
                     value={t("apartments.apartment3")}
                     label={t("apartments.apartment3")}
                     aria-label={t("apartments.apartment3")}
-                    onClick={() =>
+                    onclick={() =>
                       setFieldValue("apartmentNum", t("apartments.apartment3"))
                     }
                   />
@@ -378,7 +378,7 @@ const App = ({ apartment }) => {
                     value={t("apartments.apartment4")}
                     label={t("apartments.apartment4")}
                     aria-label={t("apartments.apartment4")}
-                    onClick={() =>
+                    onclick={() =>
                       setFieldValue(
                         t("form.apartmentNum"),
                         t("apartments.apartment4")
@@ -389,7 +389,7 @@ const App = ({ apartment }) => {
                     value={t("apartments.apartment5")}
                     label={t("apartments.apartment5")}
                     aria-label={t("apartments.apartment5")}
-                    onClick={() =>
+                    onclick={() =>
                       setFieldValue("apartmentNum", t("apartments.apartment5"))
                     }
                   />
