@@ -6,6 +6,7 @@ import { useTranslation } from "react-i18next"
 import Price from "../components/apartmentPrice"
 import Features from "../components/apartmentFeatures"
 import layoutStyle from "../styles/layout.module.css"
+import TitleBar from "../components/titleBar"
 import SEO from "../components/seo"
 
 const A1 = ["125.00 €", "155.00 €", "185.00 €", "155.00 €", "125.00 €"]
@@ -50,14 +51,13 @@ export default function Template({ data }) {
             <div style={{ textAlign: "left", fontSize: "17px" }}>
               <Link to="/apartments/">&larr; {t("apartments.subtitle")}</Link>
             </div>
-            <h2
-              style={{
-                color: "#7AAEEB",
-                textAlign: "center",
-              }}
-            >
-              {edge.node.frontmatter.title}
-            </h2>
+            <div style={{ margin: "20px 0" }}>
+              <TitleBar>
+                <h3 style={{ textTransform: "uppercase" }}>
+                  {edge.node.frontmatter.title}
+                </h3>
+              </TitleBar>
+            </div>
             <div className={style.slideshow}>
               <SlideSync apart={data.allFile.edges}></SlideSync>
             </div>
