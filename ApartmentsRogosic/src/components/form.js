@@ -223,6 +223,7 @@ const App = ({ apartment }) => {
             handleReset,
             isSubmitting,
             setFieldTouched,
+            setFieldValue,
           } = props
           return (
             <WithTranslateFormErrors
@@ -341,26 +342,47 @@ const App = ({ apartment }) => {
                     selected
                     disabled
                     label="Please choose"
+                    aria-label="Please choose"
                   />
                   <option
                     value={t("apartments.apartment1")}
                     label={t("apartments.apartment1")}
+                    aria-label={t("apartments.apartment1")}
+                    onClick={() =>
+                      setFieldValue("apartmentNum", t("apartments.apartment1"))
+                    }
                   />
                   <option
                     value={t("apartments.apartment2")}
                     label={t("apartments.apartment2")}
+                    aria-label={t("apartments.apartment2")}
+                    onClick={() =>
+                      setFieldValue("apartmentNum", t("apartments.apartment2"))
+                    }
                   />
                   <option
                     value={t("apartments.apartment3")}
                     label={t("apartments.apartment3")}
+                    aria-label={t("apartments.apartment3")}
+                    onClick={() =>
+                      setFieldValue("apartmentNum", t("apartments.apartment3"))
+                    }
                   />
                   <option
                     value={t("apartments.apartment4")}
                     label={t("apartments.apartment4")}
+                    aria-label={t("apartments.apartment4")}
+                    onClick={() =>
+                      setFieldValue("apartmentNum", t("apartments.apartment4"))
+                    }
                   />
                   <option
                     value={t("apartments.apartment5")}
                     label={t("apartments.apartment5")}
+                    aria-label={t("apartments.apartment5")}
+                    onClick={() =>
+                      setFieldValue("apartmentNum", t("apartments.apartment5"))
+                    }
                   />
                 </Select>
                 <TextArea
