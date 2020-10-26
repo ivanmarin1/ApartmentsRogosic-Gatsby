@@ -1,7 +1,6 @@
 import React from "react"
 import Modal from "react-modal"
 import { useTranslation } from "react-i18next"
-import WithTranslateFormErrors from "../i18n/useTranslateFormErrors"
 
 const customStyles = {
   content: {
