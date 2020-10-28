@@ -331,13 +331,20 @@ const App = ({ apartment }) => {
                   name={t("form.apartmentNum")}
                   // value={values.apartmentNum}
                   label={t("form.apartmentNum")}
-                  onChange={e => {
+                  onChange={(e, value) => {
                     handleChange(e)
-                    setFieldValue("apartmentNum", values.apartmentNum)
+                    setFieldValue(t("form.apartmentNum"), value)
                   }}
-                  onBlur={handleBlur}
+                  onBlur={e => {
+                    handleBlur(e)
+                    setFieldTouched(t("form.apartmentNum"), true)
+                  }}
                   style={{ display: "block" }}
                   placeholder={t("form.apartmentNumPlaceholder")}
+                  // options={
+                  //   ({ value: "", label: "Please choose" },
+                  //   { value: "apartmancic1", label: "apartmancic1" })
+                  // }
                 >
                   <option
                     value=""
