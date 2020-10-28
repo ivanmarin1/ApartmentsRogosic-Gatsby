@@ -329,7 +329,7 @@ const App = ({ apartment }) => {
                 <Select
                   id="apartmentNum"
                   name={t("form.apartmentNum")}
-                  // value={values.apartmentNum}
+                  value={values.apartmentNum}
                   label={t("form.apartmentNum")}
                   onChange={(e, value) => {
                     handleChange()
