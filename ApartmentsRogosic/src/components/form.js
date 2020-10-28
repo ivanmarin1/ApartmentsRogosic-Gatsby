@@ -332,11 +332,11 @@ const App = ({ apartment }) => {
                   // value={values.apartmentNum}
                   label={t("form.apartmentNum")}
                   onChange={(e, value) => {
-                    handleChange(e)
+                    handleChange()
                     setFieldValue(t("form.apartmentNum"), value)
                   }}
                   onBlur={e => {
-                    handleBlur(e)
+                    handleBlur()
                     setFieldTouched(t("form.apartmentNum"), true)
                   }}
                   style={{ display: "block" }}
