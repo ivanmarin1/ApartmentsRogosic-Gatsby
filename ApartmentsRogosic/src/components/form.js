@@ -329,9 +329,12 @@ const App = ({ apartment }) => {
                 <Select
                   id="apartmentNum"
                   name={t("form.apartmentNum")}
-                  value={values.apartmentNum}
+                  // value={values.apartmentNum}
                   label={t("form.apartmentNum")}
-                  onChange={handleChange}
+                  onChange={e => {
+                    handleChange(e)
+                    setFieldValue("apartmentNum", values.apartmentNum)
+                  }}
                   onBlur={handleBlur}
                   style={{ display: "block" }}
                   placeholder={t("form.apartmentNumPlaceholder")}
@@ -348,50 +351,50 @@ const App = ({ apartment }) => {
                     value={t("apartments.apartment1")}
                     label={t("apartments.apartment1")}
                     aria-label={t("apartments.apartment1")}
-                    onclick={() =>
-                      setFieldValue(
-                        values.apartmentNum,
-                        t("apartments.apartment1")
-                      )
-                    }
+                    // onclick={() =>
+                    //   setFieldValue(
+                    //     values.apartmentNum,
+                    //     t("apartments.apartment1")
+                    //   )
+                    // }
                   />
                   <option
                     value={t("apartments.apartment2")}
                     label={t("apartments.apartment2")}
                     aria-label={t("apartments.apartment2")}
-                    onclick={() =>
-                      setFieldValue(
-                        t("form.apartmentNum"),
-                        t("apartments.apartment2")
-                      )
-                    }
+                    // onclick={() =>
+                    //   setFieldValue(
+                    //     t("form.apartmentNum"),
+                    //     t("apartments.apartment2")
+                    //   )
+                    // }
                   />
                   <option
                     value={t("apartments.apartment3")}
                     label={t("apartments.apartment3")}
                     aria-label={t("apartments.apartment3")}
-                    onclick={() =>
-                      setFieldValue("apartmentNum", t("apartments.apartment3"))
-                    }
+                    // onclick={() =>
+                    //   setFieldValue("apartmentNum", t("apartments.apartment3"))
+                    // }
                   />
                   <option
                     value={t("apartments.apartment4")}
                     label={t("apartments.apartment4")}
                     aria-label={t("apartments.apartment4")}
-                    onclick={() =>
-                      setFieldValue(
-                        t("form.apartmentNum"),
-                        t("apartments.apartment4")
-                      )
-                    }
+                    // onclick={() =>
+                    //   setFieldValue(
+                    //     t("form.apartmentNum"),
+                    //     t("apartments.apartment4")
+                    //   )
+                    // }
                   />
                   <option
                     value={t("apartments.apartment5")}
                     label={t("apartments.apartment5")}
                     aria-label={t("apartments.apartment5")}
-                    onClick={() =>
-                      setFieldValue("apartmentNum", t("apartments.apartment5"))
-                    }
+                    // onClick={() =>
+                    //   setFieldValue("apartmentNum", t("apartments.apartment5"))
+                    // }
                   />
                 </Select>
                 <TextArea
