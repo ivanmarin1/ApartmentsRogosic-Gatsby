@@ -328,6 +328,9 @@ const App = ({ apartment }) => {
                   value={values.apartmentNum}
                   onChange={handleChange}
                   onBlur={handleBlur}
+                  onWheel={event => {
+                    event.preventDefault()
+                  }}
                 />
                 {/* <Select
                   id="apartmentNum"
