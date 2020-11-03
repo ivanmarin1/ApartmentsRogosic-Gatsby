@@ -4,7 +4,21 @@ import { Formik } from "formik"
 import * as Yup from "yup"
 import classnames from "classnames"
 import { useTranslation } from "react-i18next"
+import { withTrans } from "../i18n/withTrans"
 import WithTranslateFormErrors from "../i18n/useTranslateFormErrors"
+import Modal from "react-modal"
+
+const customStyles = {
+  content: {
+    top: "50%",
+    left: "50%",
+    right: "auto",
+    bottom: "auto",
+    marginRight: "-50%",
+    transform: "translate(-50%, -50%)",
+    padding: "0",
+  },
+}
 
 const InputFeedback = ({ error }) =>
   error ? <div className="input-feedback">{error}</div> : null
@@ -131,208 +145,236 @@ const Select = ({
   )
 }
 
-const App = ({ apartment }) => {
-  const { t } = useTranslation()
+class App extends React.Component {
+  constructor() {
+    super()
 
-  return (
-    <div className="app">
-      <Formik
-        user={{
-          email: "",
-          firstName: "",
-          lastName: "",
-          personNum: "",
-          childrenNum: "",
-          date: "",
-          date2: "",
-          apartmentNum: "",
-          comment: "",
-        }}
-        initialValues={{
-          email: "",
-          firstName: "",
-          lastName: "",
-          personNum: "",
-          childrenNum: "",
-          date: "",
-          date2: "",
-          apartmentNum: "",
-          comment: "",
-          "bot-field": "",
-          "form-name": "booking",
-        }}
-        validationSchema={Yup.object().shape({
-          firstName: Yup.string()
-            .strict(true)
-            .min(2, t("form.firstNameMin"))
-            .required(t("form.firstNameReq")),
-          lastName: Yup.string()
-            .min(2, t("form.lastNameMin"))
-            .required(t("form.lastNameReq")),
-          email: Yup.string()
-            .email(t("form.emailError"))
-            .required(t("form.emailReq")),
-          personNum: Yup.number()
-            .min(1, t("form.personNumMin"))
-            .max(20, t("form.personNumMax"))
-            .required(t("form.personNumReq")),
-          childrenNum: Yup.number()
-            .min(0, t("form.personNumMin"))
-            .max(20, t("form.childrenNumMax")),
-          date: Yup.date()
-            .min(new Date(), t("form.startDateLow"))
-            .required(t("form.dateReq")),
-          date2: Yup.date()
-            .required(t("form.dateReq"))
-            .min(Yup.ref("date"), t("form.endDateLess")),
-          apartmentNum: Yup.number()
-            .required(t("form.apartmentReq"))
-            .min(0, t("form.apartmentMin"))
-            .max(5, t("form.apartmentMax")),
-          comment: Yup.string(),
-        })}
-        onSubmit={(values, { setSubmitting }) => {
-          fetch("/?no-cache=1", {
-            method: "POST",
-            headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body: encode({ "form-name": "booking", ...values }),
-          })
-            .then(() => {
-              console.log("in then")
-              alert("Good job")
-              // <PopUp />
-              console.log("After popup")
+    this.state = {
+      modalIsOpen: false,
+    }
+
+    this.openModal = this.openModal.bind(this)
+    this.afterOpenModal = this.afterOpenModal.bind(this)
+    this.closeModal = this.closeModal.bind(this)
+  }
+
+  openModal() {
+    this.setState({ modalIsOpen: true })
+  }
+
+  afterOpenModal() {
+    // references are now sync'd and can be accessed.
+    this.subtitle.style.color = "white"
+    this.subtitle.style.margin = "0"
+    this.subtitle.style.padding = "5%"
+  }
+
+  closeModal() {
+    this.setState({ modalIsOpen: false })
+  }
+
+  render() {
+    // const { t } = useTranslation()
+    return (
+      <div className="app">
+        <Formik
+          user={{
+            email: "",
+            firstName: "",
+            lastName: "",
+            personNum: "",
+            childrenNum: "",
+            date: "",
+            date2: "",
+            apartmentNum: "",
+            comment: "",
+          }}
+          initialValues={{
+            email: "",
+            firstName: "",
+            lastName: "",
+            personNum: "",
+            childrenNum: "",
+            date: "",
+            date2: "",
+            apartmentNum: "",
+            comment: "",
+            "bot-field": "",
+            "form-name": "booking",
+          }}
+          validationSchema={Yup.object().shape({
+            firstName: Yup.string()
+              .strict(true)
+              .min(2, this.props.t("form.firstNameMin"))
+              .required(this.props.t("form.firstNameReq")),
+            lastName: Yup.string()
+              .min(2, this.props.t("form.lastNameMin"))
+              .required(this.props.t("form.lastNameReq")),
+            email: Yup.string()
+              .email(this.props.t("form.emailError"))
+              .required(this.props.t("form.emailReq")),
+            personNum: Yup.number()
+              .min(1, this.props.t("form.personNumMin"))
+              .max(20, this.props.t("form.personNumMax"))
+              .required(this.props.t("form.personNumReq")),
+            childrenNum: Yup.number()
+              .min(0, this.props.t("form.personNumMin"))
+              .max(20, this.props.t("form.childrenNumMax")),
+            date: Yup.date()
+              .min(new Date(), this.props.t("form.startDateLow"))
+              .required(this.props.t("form.dateReq")),
+            date2: Yup.date()
+              .required(this.props.t("form.dateReq"))
+              .min(Yup.ref("date"), this.props.t("form.endDateLess")),
+            apartmentNum: Yup.number()
+              .required(this.props.t("form.apartmentReq"))
+              .min(0, this.props.t("form.apartmentMin"))
+              .max(5, this.props.t("form.apartmentMax")),
+            comment: Yup.string(),
+          })}
+          onSubmit={(values, { setSubmitting }) => {
+            fetch("/?no-cache=1", {
+              method: "POST",
+              headers: { "Content-Type": "application/x-www-form-urlencoded" },
+              body: encode({ "form-name": "booking", ...values }),
             })
-            .catch(() => {
-              alert("Error")
-            })
-            .finally(() => setSubmitting(false))
-          setSubmitting(false)
-        }}
-        mapPropsToValues={({ user }) => ({
-          ...user,
-        })}
-        displayName="myForm"
-      >
-        {props => {
-          const {
-            values,
-            touched,
-            errors,
-            dirty,
-            handleChange,
-            handleBlur,
-            handleSubmit,
-            handleReset,
-            isSubmitting,
-            setFieldTouched,
-            setFieldValue,
-          } = props
-          return (
-            <WithTranslateFormErrors
-              errors={errors}
-              touched={touched}
-              setFieldTouched={setFieldTouched}
-            >
-              <form
-                onSubmit={handleSubmit}
-                name="booking"
-                data-netlify="true"
-                data-netlify-honeypot="bot-field"
-                action="/pages/formSuccess"
+              .then(() => {
+                console.log("in then")
+                // alert("Good job")
+                // <PopUp />
+                this.openModal()
+                console.log("After popup")
+              })
+              .catch(() => {
+                alert("Error")
+              })
+              .finally(() => setSubmitting(false))
+            setSubmitting(false)
+          }}
+          mapPropsToValues={({ user }) => ({
+            ...user,
+          })}
+          displayName="myForm"
+        >
+          {props => {
+            const {
+              values,
+              touched,
+              errors,
+              dirty,
+              handleChange,
+              handleBlur,
+              handleSubmit,
+              handleReset,
+              isSubmitting,
+              setFieldTouched,
+              setFieldValue,
+            } = props
+            return (
+              <WithTranslateFormErrors
+                errors={errors}
+                touched={touched}
+                setFieldTouched={setFieldTouched}
               >
-                <input type="hidden" name="form-name" value="booking" />
-                {/* <input name="bot-field" type="hidden" /> */}
-                <TextInput
-                  id="firstName"
-                  type="text"
-                  label={t("form.firstName")}
-                  placeholder={t("form.firstNamePlaceholder")}
-                  error={touched.firstName && errors.firstName}
-                  value={values.firstName}
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                />
-                <TextInput
-                  id="lastName"
-                  type="text"
-                  label={t("form.lastName")}
-                  placeholder={t("form.lastNamePlaceholder")}
-                  error={touched.lastName && errors.lastName}
-                  value={values.lastName}
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                />
-                <TextInput
-                  id="email"
-                  type="email"
-                  label={t("form.email")}
-                  placeholder={t("form.emailPlaceholder")}
-                  error={touched.email && errors.email}
-                  value={values.email}
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                />
-                <TextInput
-                  id="personNum"
-                  type="number"
-                  label={t("form.personNum")}
-                  placeholder={t("form.personNumPlaceholder")}
-                  error={touched.personNum && errors.personNum}
-                  value={values.personNum}
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                  onWheel={event => {
-                    event.preventDefault()
-                  }}
-                />
-                <TextInput
-                  id="childrenNum"
-                  type="number"
-                  label={t("form.childrenNum")}
-                  placeholder={t("form.childrenNumPlaceholder")}
-                  error={touched.childrenNum && errors.childrenNum}
-                  value={values.childrenNum}
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                  onWheel={event => {
-                    event.preventDefault()
-                  }}
-                />
-                <TextInput
-                  id="date"
-                  type="date"
-                  label={t("form.dateArrival")}
-                  placeholder={t("form.date1Placeholder")}
-                  error={touched.date && errors.date}
-                  value={values.date}
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                />
-                <TextInput
-                  id="date2"
-                  type="date"
-                  label={t("form.dateDeparture")}
-                  placeholder={t("form.date2Placeholder")}
-                  error={touched.date2 && errors.date2}
-                  value={values.date2}
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                />
-                <TextInput
-                  id="apartmentNum"
-                  type="number"
-                  label={t("form.apartmentNum")}
-                  placeholder={t("form.apartmentNumPlaceholder")}
-                  error={touched.apartmentNum && errors.apartmentNum}
-                  value={values.apartmentNum}
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                  onWheel={event => {
-                    event.preventDefault()
-                  }}
-                />
-                {/* <Select
+                <form
+                  onSubmit={handleSubmit}
+                  name="booking"
+                  data-netlify="true"
+                  data-netlify-honeypot="bot-field"
+                  action="/pages/formSuccess"
+                >
+                  <input type="hidden" name="form-name" value="booking" />
+                  {/* <input name="bot-field" type="hidden" /> */}
+                  <TextInput
+                    id="firstName"
+                    type="text"
+                    label={this.props.t("form.firstName")}
+                    placeholder={this.props.t("form.firstNamePlaceholder")}
+                    error={touched.firstName && errors.firstName}
+                    value={values.firstName}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                  />
+                  <TextInput
+                    id="lastName"
+                    type="text"
+                    label={this.props.t("form.lastName")}
+                    placeholder={this.props.t("form.lastNamePlaceholder")}
+                    error={touched.lastName && errors.lastName}
+                    value={values.lastName}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                  />
+                  <TextInput
+                    id="email"
+                    type="email"
+                    label={this.props.t("form.email")}
+                    placeholder={this.props.t("form.emailPlaceholder")}
+                    error={touched.email && errors.email}
+                    value={values.email}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                  />
+                  <TextInput
+                    id="personNum"
+                    type="number"
+                    label={this.props.t("form.personNum")}
+                    placeholder={this.props.t("form.personNumPlaceholder")}
+                    error={touched.personNum && errors.personNum}
+                    value={values.personNum}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    onWheel={event => {
+                      event.preventDefault()
+                    }}
+                  />
+                  <TextInput
+                    id="childrenNum"
+                    type="number"
+                    label={this.props.t("form.childrenNum")}
+                    placeholder={this.props.t("form.childrenNumPlaceholder")}
+                    error={touched.childrenNum && errors.childrenNum}
+                    value={values.childrenNum}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    onWheel={event => {
+                      event.preventDefault()
+                    }}
+                  />
+                  <TextInput
+                    id="date"
+                    type="date"
+                    label={this.props.t("form.dateArrival")}
+                    placeholder={this.props.t("form.date1Placeholder")}
+                    error={touched.date && errors.date}
+                    value={values.date}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                  />
+                  <TextInput
+                    id="date2"
+                    type="date"
+                    label={this.props.t("form.dateDeparture")}
+                    placeholder={this.props.t("form.date2Placeholder")}
+                    error={touched.date2 && errors.date2}
+                    value={values.date2}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                  />
+                  <TextInput
+                    id="apartmentNum"
+                    type="number"
+                    label={this.props.t("form.apartmentNum")}
+                    placeholder={this.props.t("form.apartmentNumPlaceholder")}
+                    error={touched.apartmentNum && errors.apartmentNum}
+                    value={values.apartmentNum}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    onWheel={event => {
+                      event.preventDefault()
+                    }}
+                  />
+                  {/* <Select
                   id="apartmentNum"
                   name={t("form.apartmentNum")}
                   value={values.apartmentNum}
@@ -410,37 +452,76 @@ const App = ({ apartment }) => {
                     // }
                   />
                 </Select> */}
-                <TextArea
-                  id="comment"
-                  type="text"
-                  label={t("form.comment")}
-                  placeholder={t("form.commentPlaceholder")}
-                  error={touched.comment && errors.comment}
-                  value={values.comment}
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                  style={{ height: "100px" }}
-                />
-                <button
-                  type="button"
-                  className="outline"
-                  onClick={() => {
-                    if (window.confirm(t("form.resetConfirm"))) handleReset()
-                  }}
-                  disabled={!dirty || isSubmitting}
-                >
-                  {t("form.resetButton")}
+                  <TextArea
+                    id="comment"
+                    type="text"
+                    label={this.props.t("form.comment")}
+                    placeholder={this.props.t("form.commentPlaceholder")}
+                    error={touched.comment && errors.comment}
+                    value={values.comment}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    style={{ height: "100px" }}
+                  />
+                  <button
+                    type="button"
+                    className="outline"
+                    onClick={() => {
+                      if (window.confirm(this.props.t("form.resetConfirm")))
+                        handleReset()
+                    }}
+                    disabled={!dirty || isSubmitting}
+                  >
+                    {this.props.t("form.resetButton")}
+                  </button>
+                  <button type="submit" disabled={isSubmitting}>
+                    {this.props.t("form.sendButton")}
+                  </button>
+                  {/* <DisplayFormikState {...props} /> */}
+                </form>
+              </WithTranslateFormErrors>
+            )
+          }}
+        </Formik>
+        <Modal
+          isOpen={this.state.modalIsOpen}
+          onAfterOpen={this.afterOpenModal}
+          onRequestClose={this.closeModal}
+          style={customStyles}
+          contentLabel="Example Modal"
+        >
+          <div style={{ backgroundColor: "#4a4ebb" }}>
+            <h2 ref={subtitle => (this.subtitle = subtitle)}>
+              &#10004; {this.props.t("form.successHeadline")}
+            </h2>
+          </div>
+          <div style={{ padding: "10px" }}>
+            <p>{this.props.t("form.successMessage")}</p>
+            <div
+              style={{
+                height: "70px",
+                position: "relative",
+              }}
+            >
+              <div
+                style={{
+                  margin: "0",
+                  position: "absolute",
+                  top: "50%",
+                  left: "50%",
+                  transform: "translate(-50%, -50%)",
+                }}
+              >
+                <button onClick={this.closeModal}>
+                  {this.props.t("form.successButton")}
                 </button>
-                <button type="submit" disabled={isSubmitting}>
-                  {t("form.sendButton")}
-                </button>
-                {/* <DisplayFormikState {...props} /> */}
-              </form>
-            </WithTranslateFormErrors>
-          )
-        }}
-      </Formik>
-    </div>
-  )
+              </div>
+            </div>
+          </div>
+        </Modal>
+      </div>
+    )
+  }
 }
-export default App
+
+export default withTrans(App)

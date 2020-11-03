@@ -22,7 +22,7 @@ const ReservationPage = ({ location }) => {
           <div>
             <p>{t("reservation.text")}</p>
           </div>
-          <Form id="root" apartment={activeApartment}></Form>
+          <Form id="root"></Form>
         </div>
       </div>
     </>
