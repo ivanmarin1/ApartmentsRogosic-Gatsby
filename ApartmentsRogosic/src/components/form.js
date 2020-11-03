@@ -185,7 +185,10 @@ const App = ({ apartment }) => {
           date2: Yup.date()
             .required(t("form.dateReq"))
             .min(Yup.ref("date"), t("form.endDateLess")),
-          apartmentNum: Yup.string().required(t("form.apartmentReq")),
+          apartmentNum: Yup.number()
+            .required(t("form.apartmentReq"))
+            .min(0, t("form.apartmentMin"))
+            .max(5, t("form.apartmentMax")),
           comment: Yup.string(),
         })}
         onSubmit={(values, { setSubmitting }) => {
@@ -316,7 +319,7 @@ const App = ({ apartment }) => {
                   onChange={handleChange}
                   onBlur={handleBlur}
                 />
-                {/* <TextInput
+                <TextInput
                   id="apartmentNum"
                   type="number"
                   label={t("form.apartmentNum")}
@@ -325,8 +328,8 @@ const App = ({ apartment }) => {
                   value={values.apartmentNum}
                   onChange={handleChange}
                   onBlur={handleBlur}
-                /> */}
-                <Select
+                />
+                {/* <Select
                   id="apartmentNum"
                   name={t("form.apartmentNum")}
                   value={values.apartmentNum}
@@ -403,7 +406,7 @@ const App = ({ apartment }) => {
                     //   setFieldValue("apartmentNum", t("apartments.apartment5"))
                     // }
                   />
-                </Select>
+                </Select> */}
                 <TextArea
                   id="comment"
                   type="text"
