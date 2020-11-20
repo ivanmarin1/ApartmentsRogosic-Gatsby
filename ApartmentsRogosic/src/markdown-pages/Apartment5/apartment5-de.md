@@ -1,23 +1,22 @@
 ---
+
 title: "Apartment 5"
 category: "Apartments"
 apartment: "A5"
 language: "de"
 path: "/apartments/apartment5"
-features: ["balcony",
-"heating",
-"seaview",
-"fridge",
-"internet",
-"microwave",
-"oven",
-"grill",
-"parking",
-"coffeeMachine",
+features: [
 "satellite",
-"eatingCutlery",
+"internet",
 "ac",
+"4ceramicHobsAndOven",
+"washingMachine",
+"coffeeMachine",
+"fridge",
+"microwave",
+"waterHeater",
+"eatingCutlery",
 "hairdryer",
-"boatMooring"]
+]
 
----Unsere neue Dachterassenwohnung, das Apartment No. 5 verfügt über 1 Schlafzimmer mit Doppelbett, 1 Schlafzimmer mit 2 getrennten Betten, Wohnküche mit 40" Led Sat-Tv, 4er Ceranfeld mit Backofen, Kühl / gefrierkombi, Geschirrspüler, Mikrowelle, Wasserkocher, Senseo Kaffeepadmaschine usw., Badezimmer mit Dusche und WC sowie eine private möblierte Dachterrasse mit fantastischem Meerblick.
+---Wohnung A5 (2 + 2) unsere Dachterrassenwohnung verfügt über 1 Schlafzimmer mit Doppelbett, 1 Schlafzimmer mit 2 getrennten Betten, Wohnküche mit 40" Smart LED Sat-Tv, 4er Ceranfeld mit Backofen, Kühl / gefrierkombi, Geschirrspülmaschine, Senseo Kaffeepadmaschine, Mikrowelle, Wasserkocher etc., Badezimmer mit Dusche und WC sowie eine private möblierte Dachterrasse mit Meerblick.

@@ -39,6 +39,7 @@
     "date": "Data",
     "price": "Prezzo",
     "features": {
+      "washingMachine": "Lavastoviglie",
       "balcony": "Balcone",
       "terrace": "Terrazza",
       "heating": "Sistema di riscaldamento",
@@ -46,15 +47,20 @@
       "fridge": "Frigorifero",
       "internet": "Internet",
       "microwave": "Microonde",
-      "oven": "Forno da cucina",
+      "4ceramicHobsAndOven": "4 piastre in vetroceramica con forno",
+      "2ceramicHob": "2 piastre in vetroceramica",
       "grill": "Griglia",
       "parking": "Parcheggio",
       "coffeeMachine": "Macchina per il caffè",
-      "satellite": "Satellitare",
+      "satellite": "Smart TV Satellitare",
       "eatingCutlery": "Piatti e posate",
       "ac": "Aria condizionata",
       "hairdryer": "Asciugacapelli",
-      "boatMooring": "Posto barca"
+      "boatMooring": "Posto barca",
+      "musicSystem": "Panasonic Sistema musicale",
+      "waterHeater": "Scaldabagno",
+      "dvdPlayer": "DVD Player"
+
     }
   },
   "reservation": {

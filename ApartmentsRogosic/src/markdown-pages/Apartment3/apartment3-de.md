@@ -1,23 +1,19 @@
 ---
+
 title: "Apartment 3"
 category: "Apartments"
 apartment: "A3"
 language: "de"
 path: "/apartments/apartment3"
-features: ["balcony",
-"heating",
-"seaview",
-"fridge",
+features: ["satellite",
 "internet",
-"microwave",
-"oven",
-"grill",
-"parking",
-"coffeeMachine",
-"satellite",
-"eatingCutlery",
 "ac",
-"hairdryer",
-"boatMooring"]
+"2ceramicHob",
+"coffeeMachine",
+"fridge",
+"microwave",
+"waterHeater",
+"eatingCutlery",
+"hairdryer"]
 
----Apartment 3 - Im 1. Stock gelegen mit Balkon und direktern Meerblick. Bad mit Dusche/WC, separates Schlafzimmer mit Doppelbett sowie Küche/Esszimmer und Wohnraum und Schlafcouch für 1 Personen. Für 3 Personen geeignet.
+---Wohnung A3 (2 + 1) im Obergeschoss verfügt über 1 Schlafzimmer mit Doppelbett, Wohnküche mit Schlafcouch, 42" Smart LED Sat-Tv, 2er Ceranfeld, Kühl / gefrierkombi, Senseo Kaffeepadmaschine, Mikrowelle, Wasserkocher etc., Badezimmer mit Dusche und WC sowie einen privaten möblierten Balkon mit Meerblick.

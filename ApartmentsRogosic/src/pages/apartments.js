@@ -52,7 +52,7 @@ const Apartments2Page = ({
           <h3>{t("apartments.subtitle")}</h3>
         </TitleBar>
         <div>
-          <p>{t("apartments.intro")}</p>
+          <p>{t("apartments.equipment-text")}</p>
         </div>
         {Apartments}
       </div>

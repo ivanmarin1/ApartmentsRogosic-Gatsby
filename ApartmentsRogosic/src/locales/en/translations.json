@@ -39,6 +39,7 @@
     "date": "Date",
     "price": "Price",
     "features": {
+      "washingMachine": "Washing machine",
       "balcony": "Balcony",
       "terrace": "Terrace",
       "heating": "Heating",
@@ -46,15 +47,18 @@
       "fridge": "Refrigerator",
       "internet": "Internet",
       "microwave": "Microwave",
-      "oven": "Kitchen oven",
+      "4ceramicHobsAndOven": "4 ceramic hobs with oven",
+      "2ceramicHob": "2 ceramic hobs",
       "grill": "Barbecue",
       "parking": "Parking spot",
       "coffeeMachine": "Coffee machine",
-      "satellite": "Satellite",
+      "satellite": "Smart LED TV",
       "eatingCutlery": "Dishes and cutlery",
       "ac": "Air conditioning",
       "hairdryer": "Hairdryer",
-      "boatMooring": "Boat mooring spot"
+      "musicSystem": "Panasonic music system",
+      "waterHeater": "Water heater",
+      "dvdPlayer": "DVD Player"
     }
   },
   "reservation": {

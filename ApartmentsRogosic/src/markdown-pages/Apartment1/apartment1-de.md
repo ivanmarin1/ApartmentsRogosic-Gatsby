@@ -5,20 +5,20 @@ category: "Apartments"
 apartment: "A1"
 language: "de"
 path: "/apartments/apartment1"
-features: ["terrace",
-"heating",
-"seaview",
-"fridge",
-"internet",
-"microwave",
-"oven",
-"grill",
-"parking",
-"coffeeMachine",
+features: [
 "satellite",
-"eatingCutlery",
 "ac",
+"internet",
+"fridge",
+"4ceramicHobsAndOven",
+"washingMachine",
+"coffeeMachine",
+"musicSystem",
+"microwave",
+"waterHeater",
+"eatingCutlery",
 "hairdryer",
-"boatMooring"]
+"dvdPlayer",
+]
 
----Apartment 1 mit 35 m2 Panoramaterrasse, 2 Bädern jeweils mit Dusche/WC, Wohnküche und 3 separaten Schlafzimmern davon 2 mit Doppelbetten und 1 mit 2 Schlafcouchen. Geeignet für 6 Personen.
+---Wohnung A1 (4 + 2) verfügt über 2 Schlafzimmer jeweils mit Doppelbett (1 davon mit Smart LED Sat-Tv und DVD Player), 1 Schlafzimmer mit 2 getrennten Schlafcouchen, 1 Badezimmer mit Dusche und WC, 1 Gäste WC mit Dusche, Wohnküche mit 42" Smart LED Sat-Tv, Panasonic Musikanlage, 4er Ceranfeld mit Backofen, Kühl / gefrierkombi, Geschirrspülmaschine, Senseo Kaffeepadmaschine, Mikrowelle, Wasserkocher etc. sowie eine 35 m² große private Loungeterrasse mit fantastischem Meerblick.

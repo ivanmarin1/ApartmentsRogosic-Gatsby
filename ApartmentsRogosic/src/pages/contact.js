@@ -47,17 +47,17 @@ const ContactPage = () => {
             </TitleBar>
             <div className={styles.info}>
               <p>
-                {t("contact.name")}
+                {/* {t("contact.name")} */}
                 Ivan Rogošić
               </p>
               <p>
-                {t("contact.phone")} <br />
+                {/* {t("contact.phone")} <br /> */}
                 <a href="tel:+49 1771 40 28 60">+49 1771 40 28 60</a>
                 <br />
                 <a href="tel:+385 95/813-1807">+385 95/813-1807</a>
               </p>
               <p>
-                {t("contact.address")}
+                {/* {t("contact.address")} */}
                 <a href="https://g.page/apartmentsrogosic?share">
                   Kalina 68, 21405 Milna, Brač
                 </a>

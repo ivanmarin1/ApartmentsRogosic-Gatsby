@@ -5,20 +5,19 @@ category: "Apartments"
 apartment: "A1"
 language: "en"
 path: "/apartments/apartment1"
-features: ["terrace",
-"heating",
-"seaview",
-"fridge",
-"internet",
-"microwave",
-"oven",
-"grill",
-"parking",
-"coffeeMachine",
-"satellite",
-"eatingCutlery",
+features: ["satellite",
 "ac",
+"internet",
+"fridge",
+"4ceramicHobsAndOven",
+"washingMachine",
+"coffeeMachine",
+"musicSystem",
+"microwave",
+"waterHeater",
+"eatingCutlery",
 "hairdryer",
-"boatMooring"]
+"dvdPlayer",
+]
 
 ---Apartment 1 - with 35 m2 terrace with panoramic view on blue sea and island Hvar, 2 bathrooms each with shower/WC, open plan kitchen. 3 separate bedrooms thereof two with twin beds and one with two studio couches. It's suitable for 6 persons.

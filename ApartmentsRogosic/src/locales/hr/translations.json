@@ -39,6 +39,7 @@
     "date": "Datum",
     "price": "Cijena",
     "features": {
+      "washingMachine": "Perilica za suđe",
       "balcony": "Balkon",
       "terrace": "Terasa",
       "heating": "Grijanje",
@@ -46,15 +47,19 @@
       "fridge": "Hladnjak",
       "internet": "Internet",
       "microwave": "Mikrovalna pećnica",
-      "oven": "Kuhinjska pećnica",
+      "4ceramicHobsAndOven": "4 keramičke ploče sa pećnicom",
+      "2ceramicHob": "2 keramičke ploče za kuhanje",
       "grill": "Roštilj",
       "parking": "Parking mjesto",
       "coffeeMachine": "Aparat za kavu",
-      "satellite": "Satelitska televizija",
+      "satellite": "Smart televizija",
       "eatingCutlery": "Posuđe i pribor za jelo",
       "ac": "Klima",
       "hairdryer": "Sušilo za kosu",
-      "boatMooring": "Vez za čamac"
+      "boatMooring": "Vez za čamac",
+      "musicSystem": "Panasonic linija",
+      "waterHeater": "Bojler",
+      "dvdPlayer": "DVD Player"
     }
   },
   "reservation": {

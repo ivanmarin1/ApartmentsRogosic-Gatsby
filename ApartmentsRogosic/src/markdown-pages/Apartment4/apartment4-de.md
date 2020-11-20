@@ -1,23 +1,19 @@
 ---
+
 title: "Apartment 4"
 category: "Apartments"
 apartment: "A4"
 language: "de"
 path: "/apartments/apartment4"
-features: ["balcony",
-"heating",
-"seaview",
-"fridge",
+features: ["satellite",
 "internet",
-"microwave",
-"oven",
-"grill",
-"parking",
-"coffeeMachine",
-"satellite",
-"eatingCutlery",
 "ac",
-"hairdryer",
-"boatMooring"]
+"2ceramicHob",
+"coffeeMachine",
+"fridge",
+"microwave",
+"waterHeater",
+"eatingCutlery",
+"hairdryer"]
 
----Apartment 4 - Im 1. Stock gelegen mit Küchenzeile und kombiniertem Wohn/Schlafraum, Bad mit Dusche/WC sowie 1 separatem Schlafzimmer mit Doppelbett. Sehr schön Balkon mit fantastische Meerblick.
+---Wohnung A4 (2) im Obergeschoss verfügt über 1 Schlafzimmer mit Doppelbett, Wohnküche mit Schlafcouch, 40" Smart LED Sat-Tv, 2er Ceranfeld, Kühl / gefrierkombi, Senseo Kaffeepadmaschine, Mikrowelle, Wasserkocher etc., Badezimmer mit Dusche und WC sowie einen privaten möblierten Balkon mit Meerblick.
