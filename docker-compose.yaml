@@ -1,0 +1,10 @@
+version: "3"
+services:
+  client:
+    build:
+      context: ./ApartmentsRogosic
+      dockerfile: Dockerfile.dev
+    volumes:
+      - ./ApartmentsRogosic/src:/app/src
+    ports:
+      - "3000:8000"
