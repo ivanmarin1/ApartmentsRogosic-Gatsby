@@ -39,7 +39,7 @@
     "date": "Date",
     "price": "Price",
     "features": {
-      "washingMachine": "Washing machine",
+      "dishwasher": "Dishwasher",
       "balcony": "Balcony",
       "terrace": "Terrace",
       "heating": "Heating",
