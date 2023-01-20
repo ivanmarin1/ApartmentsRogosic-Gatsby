@@ -16,7 +16,6 @@ features: ["satellite",
 "waterHeater",
 "eatingCutlery",
 "hairdryer",
-"dvdPlayer",
 ]
 
 ---Apartman 1 raspolaže sa prekrasnom (35 m2) terasom sa velikim pogledom na modro more, dvije kupaonice, raskošnom kuhinjom, tri spavaće sobe (sa bračnim krevetima).
