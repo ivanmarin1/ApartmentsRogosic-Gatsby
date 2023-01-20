@@ -39,7 +39,7 @@
     "lowSeason": "Nebensaison",
     "highSeason": "Hochsaison",
     "features": {
-      "washingMachine": "Geschirrspüler",
+      "dishwasher": "Geschirrspüler",
       "balcony": "Balkon",
       "terrace": "Terrasse",
       "heating": "Heizsystem",
