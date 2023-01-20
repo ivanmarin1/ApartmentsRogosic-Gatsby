@@ -39,7 +39,7 @@
     "date": "Data",
     "price": "Prezzo",
     "features": {
-      "washingMachine": "Lavastoviglie",
+      "dishwasher": "Lavastoviglie",
       "balcony": "Balcone",
       "terrace": "Terrazza",
       "heating": "Sistema di riscaldamento",

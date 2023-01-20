@@ -39,7 +39,7 @@
     "date": "Datum",
     "price": "Cijena",
     "features": {
-      "washingMachine": "Perilica za suđe",
+      "dishwasher": "Perilica za suđe",
       "balcony": "Balkon",
       "terrace": "Terasa",
       "heating": "Grijanje",

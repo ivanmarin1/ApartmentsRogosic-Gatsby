@@ -10,7 +10,7 @@ features: [
 "internet",
 "ac",
 "4ceramicHobsAndOven",
-"washingMachine",
+"dishwasher",
 "coffeeMachine",
 "fridge",
 "microwave",
