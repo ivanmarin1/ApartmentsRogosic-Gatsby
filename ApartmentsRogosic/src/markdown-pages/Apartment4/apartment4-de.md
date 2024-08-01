@@ -16,4 +16,4 @@ features: ["satellite",
 "eatingCutlery",
 "hairdryer"]
 
----Wohnung A4 (2) im Obergeschoss verfügt über 1 Schlafzimmer mit Doppelbett, Wohnküche mit Schlafcouch, 40" Smart LED Sat-Tv, 2er Ceranfeld, Kühl / gefrierkombi, Senseo Kaffeepadmaschine, Mikrowelle, Wasserkocher etc., Badezimmer mit Dusche und WC sowie einen privaten möblierten Balkon mit Meerblick.
+---Wohnung A4 (2) im Obergeschoss verfügt über 1 Schlafzimmer mit Doppelbett, Wohnküche, 40" Smart LED Sat-Tv, 2er Ceranfeld, Kühl / gefrierkombi, Senseo Kaffeepadmaschine, Mikrowelle, Wasserkocher etc., Badezimmer mit Dusche und WC sowie einen privaten möblierten Balkon mit Meerblick.
