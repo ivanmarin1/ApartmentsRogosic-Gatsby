@@ -9,11 +9,11 @@ import layoutStyle from "../styles/layout.module.css"
 import TitleBar from "../components/titleBar"
 import SEO from "../components/seo"
 
-const A1 = ["135.00 €", "165.00 €", "195.00 €", "165.00 €", "135.00 €"]
-const A2 = ["55.00 €", "65.00 €", "85.00 €", "65.00 €", "55.00 €"]
-const A3 = ["55.00 €", "75.00 €", "95.00 €", "75.00 €", "55.00 €"]
-const A4 = ["55.00 €", "75.00 €", "95.00 €", "75.00 €", "55.00 €"]
-const A5 = ["95.00 €", "115.00 €", "135.00 €", "115.00 €", "95.00 €"]
+const A1 = ["165.00 €", "195.00 €"]
+const A2 = ["65.00 €", "85.00 €"]
+const A3 = ["75.00 €", "95.00 €"]
+const A4 = ["75.00 €", "95.00 €"]
+const A5 = ["115.00 €", "135.00 €"]
 
 export default function Template({ data }) {
   const { t, i18n } = useTranslation()
