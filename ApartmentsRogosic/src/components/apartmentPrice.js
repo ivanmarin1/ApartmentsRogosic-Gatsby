@@ -13,18 +13,18 @@ const Price = ({ price }) => {
         <th>{t("apartments.price")}</th>
       </tr>
       <tr>
-        <td>{t("apartments.noSeason")}</td>
-        <td>01.01. - 15.06.</td>
+        <td>{t("apartments.lowSeason")}</td>
+        <td>01.01. - 14.06.</td>
         <td>{price[0]}</td>
       </tr>
       <tr>
-        <td>{t("apartments.lowSeason")}</td>
+        <td>{t("apartments.highSeason")}</td>
         <td>15.06. - 15.09.</td>
         <td>{price[1]}</td>
       </tr>
       <tr>
         <td>{t("apartments.lowSeason")}</td>
-        <td>15.09. - 30.09.</td>
+        <td>16.09. - 31.12.</td>
         <td>{price[0]}</td>
       </tr>
     </table>
