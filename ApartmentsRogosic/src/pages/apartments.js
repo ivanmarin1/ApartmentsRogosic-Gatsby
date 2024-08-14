@@ -16,7 +16,7 @@ const Apartments2Page = ({
   if (lang === undefined) lang = "en"
   const apartmentInitialImage = [
     {
-      link: "A1_a(1)",
+      link: "A1_terrace(1)",
     },
     {
       link: "A2_a_Terrace (1)",
